@@ -1,0 +1,215 @@
+[gd_scene load_steps=11 format=3 uid="uid://cp5pouep4ov0l"]
+
+[ext_resource type="Texture2D" uid="uid://o8k0elyht3kk" path="res://sprites/Black.png" id="1_g071l"]
+[ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://PressStart2P-Regular.ttf" id="2_88jc1"]
+[ext_resource type="Script" path="res://scripts/start/start.gd" id="2_j17x2"]
+[ext_resource type="Script" path="res://scripts/start/exit.gd" id="3_sbu3e"]
+[ext_resource type="Texture2D" uid="uid://dca40k26ykqd6" path="res://icon.svg" id="4_k3pk5"]
+[ext_resource type="Script" path="res://scripts/start/fs_button.gd" id="7_bh2q0"]
+[ext_resource type="Script" path="res://scripts/start/camera.gd" id="7_hh4lx"]
+
+[sub_resource type="Animation" id="Animation_x6u8h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemList:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p5ml1"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemList:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 1.5, 2, 2.5, 3, 3.53333, 4.03333, 4.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(9, -4), Vector2(-10, -8), Vector2(3, -4), Vector2(-13, -2), Vector2(11, -9), Vector2(-5, -10), Vector2(17, -8), Vector2(0, -7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6o504"]
+_data = {
+"RESET": SubResource("Animation_x6u8h"),
+"new_animation": SubResource("Animation_p5ml1")
+}
+
+[node name="start_menu" type="Node2D"]
+
+[node name="ItemList" type="ItemList" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 396.0
+offset_bottom = 639.0
+
+[node name="start" type="TextureButton" parent="ItemList"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 200.0
+offset_right = 340.0
+offset_bottom = 300.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("1_g071l")
+texture_pressed = ExtResource("1_g071l")
+texture_hover = ExtResource("1_g071l")
+texture_disabled = ExtResource("1_g071l")
+texture_focused = ExtResource("1_g071l")
+stretch_mode = 0
+script = ExtResource("2_j17x2")
+
+[node name="Label" type="Label" parent="ItemList/start"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("2_88jc1")
+theme_override_font_sizes/font_size = 40
+text = "Играть"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="settings" type="TextureButton" parent="ItemList"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 350.0
+offset_right = 340.0
+offset_bottom = 450.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("1_g071l")
+texture_pressed = ExtResource("1_g071l")
+texture_hover = ExtResource("1_g071l")
+texture_disabled = ExtResource("1_g071l")
+texture_focused = ExtResource("1_g071l")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ItemList/settings"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("2_88jc1")
+theme_override_font_sizes/font_size = 30
+text = "Настройки"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exit" type="TextureButton" parent="ItemList"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 40.0
+offset_top = 500.0
+offset_right = 340.0
+offset_bottom = 600.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("1_g071l")
+texture_pressed = ExtResource("1_g071l")
+texture_hover = ExtResource("1_g071l")
+texture_disabled = ExtResource("1_g071l")
+texture_focused = ExtResource("1_g071l")
+stretch_mode = 0
+script = ExtResource("3_sbu3e")
+
+[node name="Label" type="Label" parent="ItemList/exit"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("2_88jc1")
+theme_override_font_sizes/font_size = 40
+text = "Выход
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6o504")
+}
+speed_scale = 0.2
+
+[node name="bg" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(574.5, 322)
+scale = Vector2(8.96094, 5.04688)
+texture = ExtResource("4_k3pk5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+position_smoothing_enabled = true
+script = ExtResource("7_hh4lx")
+
+[node name="settings" type="Node2D" parent="."]
+
+[node name="back" type="TextureButton" parent="settings"]
+offset_left = -1262.0
+offset_top = 475.0
+offset_right = -962.0
+offset_bottom = 575.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("1_g071l")
+texture_pressed = ExtResource("1_g071l")
+texture_hover = ExtResource("1_g071l")
+texture_disabled = ExtResource("1_g071l")
+texture_focused = ExtResource("1_g071l")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="settings/back"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("2_88jc1")
+theme_override_font_sizes/font_size = 40
+text = "Назад
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="bg2" type="Sprite2D" parent="settings"]
+z_index = -3
+position = Vector2(-1400, 0)
+scale = Vector2(8.96094, 5.04688)
+texture = ExtResource("4_k3pk5")
+centered = false
+
+[node name="fs_text" type="Label" parent="settings"]
+offset_left = -1260.0
+offset_top = 65.0
+offset_right = -780.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("2_88jc1")
+theme_override_font_sizes/font_size = 40
+text = "Полный Экран"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fs_button" type="TextureButton" parent="settings"]
+offset_left = -730.0
+offset_top = 72.0
+offset_right = -630.0
+offset_bottom = 172.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("1_g071l")
+stretch_mode = 0
+script = ExtResource("7_bh2q0")
+
+[connection signal="button_up" from="ItemList/start" to="ItemList/start" method="_on_button_up"]
+[connection signal="button_up" from="ItemList/settings" to="Camera2D" method="_on_settings_button_up"]
+[connection signal="button_up" from="ItemList/exit" to="ItemList/exit" method="_on_button_up"]
+[connection signal="button_up" from="settings/back" to="Camera2D" method="_on_back_button_up"]
+[connection signal="button_up" from="settings/fs_button" to="settings/fs_button" method="_on_button_up"]
