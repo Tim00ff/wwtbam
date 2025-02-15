@@ -1,3 +1,329 @@
-[gd_scene format=3 uid="uid://o0hrcwfcvhfp"]
+[gd_scene load_steps=16 format=3 uid="uid://o0hrcwfcvhfp"]
+
+[ext_resource type="Script" path="res://scripts/wwtbam/main_game.gd" id="1_8cg4m"]
+[ext_resource type="AudioStream" uid="uid://s0ng004wb1xx" path="res://audio/hello-new-punter-2008-short.mp3" id="1_njn5i"]
+[ext_resource type="Script" path="res://scripts/wwtbam/camera_2d.gd" id="2_rm4fw"]
+[ext_resource type="AudioStream" uid="uid://nu0i3e0hlkyf" path="res://audio/q1-5-bed-2008.mp3" id="2_wturb"]
+[ext_resource type="Script" path="res://scripts/wwtbam/background_sound.gd" id="3_7hgwq"]
+[ext_resource type="Texture2D" uid="uid://o8k0elyht3kk" path="res://sprites/Black.png" id="4_hpwlj"]
+[ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://PressStart2P-Regular.ttf" id="5_hhv0y"]
+[ext_resource type="AudioStream" uid="uid://dqrwo0dyofg05" path="res://audio/khsm_50-50.mp3" id="6_281c4"]
+[ext_resource type="Texture2D" uid="uid://covktttdtjkof" path="res://sprites/white.png" id="6_s3mr8"]
+[ext_resource type="AudioStream" uid="uid://dy3gnncccb0qc" path="res://audio/khsm_q1-5-wrong.mp3" id="7_qbd1y"]
+[ext_resource type="Script" path="res://scripts/wwtbam/amount.gd" id="7_u7661"]
+[ext_resource type="AudioStream" uid="uid://d28oxupbvoee5" path="res://audio/khsm_q1-5-correct-o.mp3" id="8_4xnfv"]
+
+[sub_resource type="Animation" id="Animation_1am8d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("sounds/choice:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("sounds/background sound:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("Answers/White:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0, 0.521569)]
+}
+
+[sub_resource type="Animation" id="Animation_dm6i7"]
+resource_name = "option1choice"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sounds/choice:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sounds/background sound:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Answers/White:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0, 0.521569)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pb4j3"]
+_data = {
+"RESET": SubResource("Animation_1am8d"),
+"option1choice": SubResource("Animation_dm6i7")
+}
 
 [node name="WWTBAM" type="Node2D"]
+script = ExtResource("1_8cg4m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+script = ExtResource("2_rm4fw")
+
+[node name="sounds" type="Node" parent="."]
+
+[node name="startup sound" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("1_njn5i")
+volume_db = -3.709
+pitch_scale = 1.11
+autoplay = true
+
+[node name="background sound" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("2_wturb")
+volume_db = -1.502
+pitch_scale = 1.11
+script = ExtResource("3_7hgwq")
+
+[node name="choice" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("6_281c4")
+
+[node name="wrong" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("7_qbd1y")
+
+[node name="right" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("8_4xnfv")
+
+[node name="Answers" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="White" type="Sprite2D" parent="Answers"]
+self_modulate = Color(0.0392157, 1, 0, 0.635294)
+z_index = 1
+position = Vector2(868, 499)
+scale = Vector2(50.4, 7)
+texture = ExtResource("6_s3mr8")
+
+[node name="option1" type="TextureButton" parent="Answers"]
+self_modulate = Color(0.882353, 1, 0, 1)
+offset_left = 40.0
+offset_top = 554.0
+offset_right = 543.0
+offset_bottom = 624.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("4_hpwlj")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Answers/option1"]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvhvhvjASVDJHSAVDJASHVDvhvhv
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="option2" type="TextureButton" parent="Answers"]
+offset_left = 617.0
+offset_top = 554.0
+offset_right = 1120.0
+offset_bottom = 624.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("4_hpwlj")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Answers/option2"]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="option3" type="TextureButton" parent="Answers"]
+offset_left = 40.0
+offset_top = 464.0
+offset_right = 543.0
+offset_bottom = 534.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("4_hpwlj")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Answers/option3"]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="option4" type="TextureButton" parent="Answers"]
+offset_left = 617.0
+offset_top = 464.0
+offset_right = 1120.0
+offset_bottom = 534.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("4_hpwlj")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Answers/option4"]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="Question" type="Node2D" parent="."]
+
+[node name="Question_sprite" type="Sprite2D" parent="Question"]
+position = Vector2(580, 304)
+scale = Vector2(108, 25.6)
+texture = ExtResource("4_hpwlj")
+
+[node name="Question label" type="Label" parent="Question"]
+offset_left = 56.0
+offset_top = 192.0
+offset_right = 1104.0
+offset_bottom = 419.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "WABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUB"
+autowrap_mode = 3
+
+[node name="Help" type="Node2D" parent="."]
+
+[node name="Money" type="Node2D" parent="."]
+
+[node name="money_bg1" type="Sprite2D" parent="Money"]
+position = Vector2(988, 56)
+scale = Vector2(31.2, 6.4)
+texture = ExtResource("4_hpwlj")
+
+[node name="White" type="Sprite2D" parent="Money"]
+position = Vector2(1060, 56)
+scale = Vector2(16.8, 6.4)
+texture = ExtResource("6_s3mr8")
+
+[node name="money" type="Label" parent="Money"]
+offset_left = 840.0
+offset_top = 24.0
+offset_right = 1088.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "Деньги:"
+vertical_alignment = 1
+
+[node name="amount" type="Label" parent="Money"]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 984.0
+offset_top = 24.0
+offset_right = 1144.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "1$"
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("7_u7661")
+
+[node name="take money" type="TextureButton" parent="Money"]
+offset_left = 832.0
+offset_top = 96.0
+offset_right = 1032.0
+offset_bottom = 146.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("4_hpwlj")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Money/take money"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.4
+anchor_bottom = -0.4
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "Забрать
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+deterministic = true
+libraries = {
+"": SubResource("AnimationLibrary_pb4j3")
+}
+
+[connection signal="finished" from="sounds/startup sound" to="sounds/background sound" method="_on_startup_sound_finished"]
+[connection signal="button_up" from="Answers/option1" to="." method="_on_option_1_button_up"]
+[connection signal="button_up" from="Answers/option2" to="." method="_on_option_2_button_up"]
+[connection signal="button_up" from="Answers/option3" to="." method="_on_option_3_button_up"]
+[connection signal="button_up" from="Answers/option4" to="." method="_on_option_4_button_up"]

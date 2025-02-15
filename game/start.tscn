@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cp5pouep4ov0l"]
+[gd_scene load_steps=12 format=3 uid="uid://cp5pouep4ov0l"]
 
 [ext_resource type="Texture2D" uid="uid://o8k0elyht3kk" path="res://sprites/Black.png" id="1_g071l"]
 [ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://PressStart2P-Regular.ttf" id="2_88jc1"]
 [ext_resource type="Script" path="res://scripts/start/start.gd" id="2_j17x2"]
 [ext_resource type="Script" path="res://scripts/start/exit.gd" id="3_sbu3e"]
 [ext_resource type="Texture2D" uid="uid://dca40k26ykqd6" path="res://icon.svg" id="4_k3pk5"]
+[ext_resource type="Script" path="res://scripts/start/animation_player.gd" id="5_htksb"]
 [ext_resource type="Script" path="res://scripts/start/fs_button.gd" id="7_bh2q0"]
 [ext_resource type="Script" path="res://scripts/start/camera.gd" id="7_hh4lx"]
 
@@ -139,6 +140,7 @@ libraries = {
 "": SubResource("AnimationLibrary_6o504")
 }
 speed_scale = 0.2
+script = ExtResource("5_htksb")
 
 [node name="bg" type="Sprite2D" parent="."]
 z_index = -3
