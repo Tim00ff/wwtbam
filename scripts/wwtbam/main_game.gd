@@ -33,10 +33,11 @@ func load_questions(file_path: String) -> Array:
 
 func change_question(questions):
 	if questions:
+		randomize()
 		var q = questions.pick_random()
+		questions.erase(q)
 		get_node("Question/Question label").text = q[1]
 		answers_arr = [q[2], q[3], q[4], q[5]]
-		randomize()
 		answers_arr.shuffle()
 		correct_answer = answers_arr.find(q[2])
 		get_node("Answers/option1/Label").text = answers_arr[0]

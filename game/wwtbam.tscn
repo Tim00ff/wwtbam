@@ -140,6 +140,7 @@ texture = ExtResource("6_s3mr8")
 
 [node name="option1" type="TextureButton" parent="Answers"]
 self_modulate = Color(0.882353, 1, 0, 1)
+layout_mode = 0
 offset_left = 40.0
 offset_top = 554.0
 offset_right = 543.0
@@ -163,6 +164,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="option2" type="TextureButton" parent="Answers"]
+layout_mode = 0
 offset_left = 617.0
 offset_top = 554.0
 offset_right = 1120.0
@@ -187,6 +189,7 @@ autowrap_mode = 3
 metadata/_edit_lock_ = true
 
 [node name="option3" type="TextureButton" parent="Answers"]
+layout_mode = 0
 offset_left = 40.0
 offset_top = 464.0
 offset_right = 543.0
@@ -211,6 +214,7 @@ autowrap_mode = 3
 metadata/_edit_lock_ = true
 
 [node name="option4" type="TextureButton" parent="Answers"]
+layout_mode = 0
 offset_left = 617.0
 offset_top = 464.0
 offset_right = 1120.0
