@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://PressStart2P-Regular.ttf" id="2_88jc1"]
 [ext_resource type="Script" path="res://scripts/start/start.gd" id="2_j17x2"]
 [ext_resource type="Script" path="res://scripts/start/exit.gd" id="3_sbu3e"]
-[ext_resource type="Texture2D" uid="uid://dca40k26ykqd6" path="res://icon.svg" id="5_1s1dg"]
+[ext_resource type="Texture2D" uid="uid://ukemk53g2ldi" path="res://log2.png" id="5_ae5x4"]
 [ext_resource type="Script" path="res://scripts/start/animation_player.gd" id="5_htksb"]
 [ext_resource type="Texture2D" uid="uid://bpdvigeyf3o5c" path="res://fon.png" id="6_sfcq2"]
 [ext_resource type="Script" path="res://scripts/start/fs_button.gd" id="7_bh2q0"]
@@ -53,16 +53,17 @@ _data = {
 
 [node name="ItemList" type="ItemList" parent="."]
 self_modulate = Color(1, 1, 1, 0)
-offset_right = 732.0
-offset_bottom = 639.0
+offset_left = 208.0
+offset_right = 940.0
+offset_bottom = 648.0
 
 [node name="start" type="TextureButton" parent="ItemList"]
 self_modulate = Color(1, 1, 1, 0.490196)
 layout_mode = 2
-offset_left = 32.0
+offset_left = 48.0
 offset_top = 368.0
-offset_right = 615.0
-offset_bottom = 432.0
+offset_right = 598.0
+offset_bottom = 428.0
 scale = Vector2(1.2, 1.2)
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
@@ -78,10 +79,10 @@ script = ExtResource("2_j17x2")
 
 [node name="Label" type="Label" parent="ItemList/start"]
 layout_mode = 0
-offset_right = 586.0
-offset_bottom = 63.0
+offset_right = 550.0
+offset_bottom = 60.0
 theme_override_fonts/font = ExtResource("2_88jc1")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = "Играть"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -89,10 +90,10 @@ vertical_alignment = 1
 [node name="settings" type="TextureButton" parent="ItemList"]
 self_modulate = Color(1, 1, 1, 0.490196)
 layout_mode = 2
-offset_left = 94.0
+offset_left = 174.0
 offset_top = 471.0
-offset_right = 677.0
-offset_bottom = 535.0
+offset_right = 574.0
+offset_bottom = 531.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
 action_mode = 0
@@ -106,10 +107,10 @@ stretch_mode = 0
 
 [node name="Label" type="Label" parent="ItemList/settings"]
 layout_mode = 0
-offset_right = 584.0
-offset_bottom = 63.0
+offset_right = 400.0
+offset_bottom = 60.0
 theme_override_fonts/font = ExtResource("2_88jc1")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "Настройки"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -117,10 +118,10 @@ vertical_alignment = 1
 [node name="exit" type="TextureButton" parent="ItemList"]
 self_modulate = Color(1, 1, 1, 0.490196)
 layout_mode = 2
-offset_left = 94.0
+offset_left = 174.0
 offset_top = 539.0
-offset_right = 677.0
-offset_bottom = 603.0
+offset_right = 574.0
+offset_bottom = 599.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
 action_mode = 0
@@ -135,10 +136,10 @@ script = ExtResource("3_sbu3e")
 
 [node name="Label" type="Label" parent="ItemList/exit"]
 layout_mode = 0
-offset_right = 584.0
-offset_bottom = 63.0
+offset_right = 400.0
+offset_bottom = 60.0
 theme_override_fonts/font = ExtResource("2_88jc1")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "Выход
 "
 horizontal_alignment = 1
@@ -151,18 +152,18 @@ anchor_left = -0.0983607
 anchor_top = 0.0125196
 anchor_right = -0.0983607
 anchor_bottom = 0.0125196
-offset_left = 112.0
-offset_top = 128.0
-offset_right = 615.0
-offset_bottom = 256.0
+offset_left = 96.0
+offset_top = -32.1127
+offset_right = 587.0
+offset_bottom = 258.887
 scale = Vector2(1.4, 1.4)
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("5_1s1dg")
+texture_normal = ExtResource("5_ae5x4")
 stretch_mode = 6
-metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ItemList")
 libraries = {
 "": SubResource("AnimationLibrary_6o504")
 }
