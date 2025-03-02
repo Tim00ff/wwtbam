@@ -55,7 +55,7 @@ func change_question(questions):
 func _on_option_1_button_up() -> void:
 	get_node('AnimationPlayer').play('option1choice')
 	get_node('Answers/White').z_index = 1
-	get_node('Answers/White').position = Vector2(291.5, 589)
+	get_node('Answers/White').position = Vector2(288.5, 591)
 	disable_buttons()
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(0)
@@ -64,7 +64,7 @@ func _on_option_1_button_up() -> void:
 func _on_option_2_button_up() -> void:
 	get_node('AnimationPlayer').play('option1choice')
 	get_node('Answers/White').z_index = 1
-	get_node('Answers/White').position = Vector2(868, 589)
+	get_node('Answers/White').position = Vector2(866, 590)
 	disable_buttons()
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(1)
@@ -73,7 +73,7 @@ func _on_option_2_button_up() -> void:
 func _on_option_3_button_up() -> void:
 	get_node('AnimationPlayer').play('option1choice')
 	get_node('Answers/White').z_index = 1
-	get_node('Answers/White').position = Vector2(291.5, 499)
+	get_node('Answers/White').position = Vector2(288.5, 476)
 	disable_buttons()
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(2)
@@ -82,7 +82,7 @@ func _on_option_3_button_up() -> void:
 func _on_option_4_button_up() -> void:
 	get_node('AnimationPlayer').play('option1choice')
 	get_node('Answers/White').z_index = 1
-	get_node('Answers/White').position = Vector2(868, 499)
+	get_node('Answers/White').position = Vector2(865.5, 473)
 	disable_buttons()
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(3)

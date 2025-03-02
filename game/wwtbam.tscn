@@ -1,19 +1,23 @@
-[gd_scene load_steps=18 format=3 uid="uid://o0hrcwfcvhfp"]
+[gd_scene load_steps=22 format=3 uid="uid://o0hrcwfcvhfp"]
 
 [ext_resource type="Script" path="res://scripts/wwtbam/main_game.gd" id="1_8cg4m"]
 [ext_resource type="AudioStream" uid="uid://s0ng004wb1xx" path="res://audio/hello-new-punter-2008-short.mp3" id="1_njn5i"]
 [ext_resource type="Script" path="res://scripts/wwtbam/camera_2d.gd" id="2_rm4fw"]
 [ext_resource type="AudioStream" uid="uid://nu0i3e0hlkyf" path="res://audio/q1-5-bed-2008.mp3" id="2_wturb"]
 [ext_resource type="Script" path="res://scripts/wwtbam/background_sound.gd" id="3_7hgwq"]
-[ext_resource type="Texture2D" uid="uid://o8k0elyht3kk" path="res://sprites/Black.png" id="4_hpwlj"]
 [ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://PressStart2P-Regular.ttf" id="5_hhv0y"]
 [ext_resource type="AudioStream" uid="uid://dqrwo0dyofg05" path="res://audio/khsm_50-50.mp3" id="6_281c4"]
-[ext_resource type="Texture2D" uid="uid://covktttdtjkof" path="res://sprites/white.png" id="6_s3mr8"]
 [ext_resource type="AudioStream" uid="uid://dy3gnncccb0qc" path="res://audio/khsm_q1-5-wrong.mp3" id="7_qbd1y"]
 [ext_resource type="Script" path="res://scripts/wwtbam/amount.gd" id="7_u7661"]
 [ext_resource type="AudioStream" uid="uid://d28oxupbvoee5" path="res://audio/khsm_q1-5-correct-o.mp3" id="8_4xnfv"]
+[ext_resource type="Texture2D" uid="uid://c4yn4shn7d5rr" path="res://for_police.png" id="9_u2kjc"]
+[ext_resource type="Texture2D" uid="uid://cfmaahe2gff5y" path="res://pot.png" id="10_fcisg"]
+[ext_resource type="Texture2D" uid="uid://burc4k30pcbbo" path="res://quest-1.png" id="12_w3sx7"]
+[ext_resource type="Texture2D" uid="uid://tobogod17th" path="res://crows.png" id="13_84qrv"]
 [ext_resource type="Texture2D" uid="uid://bpdvigeyf3o5c" path="res://fon.png" id="13_tfo2d"]
+[ext_resource type="Texture2D" uid="uid://cl84o75ne2vtf" path="res://door.png" id="14_0i8ff"]
 [ext_resource type="Script" path="res://scripts/start/start.gd" id="14_7hduf"]
+[ext_resource type="Texture2D" uid="uid://by11aa53bxnag" path="res://cash.png" id="16_j45yf"]
 
 [sub_resource type="Animation" id="Animation_1am8d"]
 length = 0.001
@@ -134,33 +138,35 @@ stream = ExtResource("8_4xnfv")
 [node name="Answers" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = -6.0
+offset_bottom = -6.0
 
 [node name="White" type="Sprite2D" parent="Answers"]
-self_modulate = Color(0.0392157, 1, 0, 0.635294)
+self_modulate = Color(1, 1, 0, 0.521569)
 z_index = 1
-position = Vector2(868, 499)
-scale = Vector2(50.4, 7)
-texture = ExtResource("6_s3mr8")
+position = Vector2(865, 473)
+scale = Vector2(0.992308, 0.952381)
+texture = ExtResource("9_u2kjc")
 
 [node name="option1" type="TextureButton" parent="Answers"]
-self_modulate = Color(0.882353, 1, 0, 1)
 layout_mode = 0
-offset_left = 40.0
-offset_top = 554.0
-offset_right = 543.0
-offset_bottom = 624.0
+offset_left = 28.0
+offset_top = 537.0
+offset_right = 548.0
+offset_bottom = 642.0
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("4_hpwlj")
+texture_normal = ExtResource("10_fcisg")
 stretch_mode = 0
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Answers/option1"]
 layout_mode = 0
-offset_right = 500.0
-offset_bottom = 70.0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 515.0
+offset_bottom = 102.0
 theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 12
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvhvhvjASVDJHSAVDJASHVDvhvhv
 "
 horizontal_alignment = 1
@@ -169,160 +175,142 @@ autowrap_mode = 3
 
 [node name="option2" type="TextureButton" parent="Answers"]
 layout_mode = 0
-offset_left = 617.0
-offset_top = 554.0
-offset_right = 1120.0
-offset_bottom = 624.0
+offset_left = 605.0
+offset_top = 537.0
+offset_right = 1125.0
+offset_bottom = 642.0
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("4_hpwlj")
+texture_normal = ExtResource("10_fcisg")
 stretch_mode = 0
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Answers/option2"]
 layout_mode = 0
-offset_right = 500.0
-offset_bottom = 70.0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 514.0
+offset_bottom = 100.0
 theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 12
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-metadata/_edit_lock_ = true
 
 [node name="option3" type="TextureButton" parent="Answers"]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 464.0
-offset_right = 543.0
-offset_bottom = 534.0
+offset_left = 28.0
+offset_top = 422.0
+offset_right = 548.0
+offset_bottom = 527.0
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("4_hpwlj")
+texture_normal = ExtResource("10_fcisg")
 stretch_mode = 0
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Answers/option3"]
 layout_mode = 0
-offset_right = 500.0
-offset_bottom = 70.0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 515.0
+offset_bottom = 100.0
 theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 12
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-metadata/_edit_lock_ = true
 
 [node name="option4" type="TextureButton" parent="Answers"]
 layout_mode = 0
-offset_left = 617.0
-offset_top = 464.0
-offset_right = 1120.0
-offset_bottom = 534.0
+offset_left = 605.0
+offset_top = 420.0
+offset_right = 1125.0
+offset_bottom = 525.0
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("4_hpwlj")
+texture_normal = ExtResource("10_fcisg")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Answers/option4"]
 layout_mode = 0
-offset_right = 500.0
-offset_bottom = 70.0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 513.0
+offset_bottom = 99.0
 theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 12
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-metadata/_edit_lock_ = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Question" type="Node2D" parent="."]
 
 [node name="Question_sprite" type="Sprite2D" parent="Question"]
-position = Vector2(580, 304)
-scale = Vector2(108, 25.6)
-texture = ExtResource("4_hpwlj")
+position = Vector2(503.729, 311)
+scale = Vector2(0.864866, 0.597016)
+texture = ExtResource("12_w3sx7")
 
 [node name="Question label" type="Label" parent="Question"]
-offset_left = 56.0
-offset_top = 192.0
-offset_right = 1104.0
-offset_bottom = 419.0
+offset_left = 69.0
+offset_top = 174.0
+offset_right = 1117.0
+offset_bottom = 401.0
 theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "WABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUB"
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Crows" type="Sprite2D" parent="Question"]
+position = Vector2(-616, 112)
+texture = ExtResource("13_84qrv")
 
 [node name="Help" type="Node2D" parent="."]
 
 [node name="Money" type="Node2D" parent="."]
 
-[node name="money_bg1" type="Sprite2D" parent="Money"]
-position = Vector2(988, 56)
-scale = Vector2(31.2, 6.4)
-texture = ExtResource("4_hpwlj")
-
-[node name="White" type="Sprite2D" parent="Money"]
-position = Vector2(1060, 56)
-scale = Vector2(16.8, 6.4)
-texture = ExtResource("6_s3mr8")
-
-[node name="money" type="Label" parent="Money"]
-offset_left = 840.0
-offset_top = 24.0
-offset_right = 1088.0
-offset_bottom = 88.0
-theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 20
-text = "Деньги:"
-vertical_alignment = 1
-
 [node name="amount" type="Label" parent="Money"]
-self_modulate = Color(0, 0, 0, 1)
-offset_left = 984.0
-offset_top = 24.0
-offset_right = 1144.0
-offset_bottom = 88.0
+self_modulate = Color(0, 1, 0, 1)
+offset_left = 979.0
+offset_top = 89.0
+offset_right = 1139.0
+offset_bottom = 153.0
 theme_override_fonts/font = ExtResource("5_hhv0y")
 theme_override_font_sizes/font_size = 20
 text = "1$"
+horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 script = ExtResource("7_u7661")
 
 [node name="take money" type="TextureButton" parent="Money"]
-offset_left = 832.0
-offset_top = 96.0
-offset_right = 1032.0
-offset_bottom = 146.0
+offset_left = 44.0
+offset_top = 26.0
+offset_right = 119.0
+offset_bottom = 127.0
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("4_hpwlj")
 stretch_mode = 0
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Money/take money"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = -0.4
-anchor_bottom = -0.4
-offset_top = 20.0
-offset_right = 200.0
-offset_bottom = 70.0
-theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 20
-text = "Забрать
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = 75.0
+offset_right = 67.0
+offset_bottom = 98.0
+text = "Забрать "
+
+[node name="Door" type="Sprite2D" parent="Money"]
+position = Vector2(79, 57)
+scale = Vector2(0.154297, 0.154297)
+texture = ExtResource("14_0i8ff")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 deterministic = true
@@ -344,34 +332,28 @@ metadata/_edit_lock_ = true
 [node name="Temporary bg" type="Sprite2D" parent="endgame"]
 position = Vector2(-600, 324)
 scale = Vector2(115.2, 64.8)
-texture = ExtResource("6_s3mr8")
 metadata/_edit_lock_ = true
 
 [node name="start" type="TextureButton" parent="endgame"]
-self_modulate = Color(1, 1, 1, 0.490196)
-offset_left = -920.0
+offset_left = -926.0
 offset_top = 500.0
-offset_right = -370.0
+offset_right = -376.0
 offset_bottom = 560.0
 scale = Vector2(1.2, 1.2)
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("4_hpwlj")
-texture_pressed = ExtResource("4_hpwlj")
-texture_hover = ExtResource("4_hpwlj")
-texture_disabled = ExtResource("4_hpwlj")
-texture_focused = ExtResource("4_hpwlj")
+texture_normal = ExtResource("10_fcisg")
 stretch_mode = 0
 script = ExtResource("14_7hduf")
 
 [node name="Label" type="Label" parent="endgame/start"]
 layout_mode = 0
 offset_right = 550.0
-offset_bottom = 60.0
+offset_bottom = 104.0
 theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 18
 text = "Играть еще?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -380,14 +362,14 @@ vertical_alignment = 1
 position = Vector2(-1175, 0)
 
 [node name="Question_sprite" type="Sprite2D" parent="endgame/end_screen"]
-position = Vector2(580, 304)
-scale = Vector2(108, 25.6)
-texture = ExtResource("4_hpwlj")
+position = Vector2(500, 345)
+scale = Vector2(0.881185, 0.624074)
+texture = ExtResource("12_w3sx7")
 
 [node name="end_label" type="Label" parent="endgame/end_screen"]
-offset_left = 56.0
+offset_left = 48.0
 offset_top = 192.0
-offset_right = 1104.0
+offset_right = 1096.0
 offset_bottom = 419.0
 theme_override_fonts/font = ExtResource("5_hhv0y")
 theme_override_font_sizes/font_size = 20
@@ -397,6 +379,11 @@ text = "Поздравляем вам с окончанием игры.
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="Cash" type="Sprite2D" parent="."]
+position = Vector2(1057, 61)
+scale = Vector2(0.373047, 0.205078)
+texture = ExtResource("16_j45yf")
 
 [connection signal="finished" from="sounds/startup sound" to="sounds/background sound" method="_on_startup_sound_finished"]
 [connection signal="button_up" from="Answers/option1" to="." method="_on_option_1_button_up"]

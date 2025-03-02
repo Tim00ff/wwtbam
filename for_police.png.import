@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i6tgt82r118b"
-path="res://.godot/imported/rhombus-svgrepo-com.svg-fe36d305b54238b399fa08d43bf6d733.ctex"
+uid="uid://c4yn4shn7d5rr"
+path="res://.godot/imported/for_police.png-1a33f5e4c60943cd03ba00c01f8c2df3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rhombus-svgrepo-com.svg"
-dest_files=["res://.godot/imported/rhombus-svgrepo-com.svg-fe36d305b54238b399fa08d43bf6d733.ctex"]
+source_file="res://for_police.png"
+dest_files=["res://.godot/imported/for_police.png-1a33f5e4c60943cd03ba00c01f8c2df3.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
