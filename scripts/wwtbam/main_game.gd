@@ -3,6 +3,9 @@ var questions = 0
 var answers_arr
 var correct_answer
 
+var record
+
+
 func _ready() -> void:
 	questions = load_questions("res://questions/questions.txt")
 	change_question(questions)
@@ -98,7 +101,9 @@ func is_answer_right(option_id):
 		get_node('Answers/White').self_modulate = '#AF1B3Fa2'
 		get_node('sounds/wrong').playing = true
 		await get_tree().create_timer(1.5).timeout
-	reset()
+		get_node("Money/amount").money = on_death_money(get_node("Money/amount").money) / 2 # Делим на 2, потому что метод update money умножает на 2.
+		get_node("Money/amount").update_money()
+		end_game()
 
 func reset():
 	get_node('Answers/White').position = Vector2(0, -10000)
@@ -117,3 +122,43 @@ func enable_buttons():
 		get_node("Answers/option2").disabled = false
 		get_node("Answers/option3").disabled = false
 		get_node("Answers/option4").disabled = false
+
+
+func _on_take_money_button_up() -> void:
+	end_game()
+	
+
+func on_death_money(current_money):
+	var var_for_money = current_money
+	var table = [0, 8, 32, 256, 1024, 16000, 150000, 1000000]
+	var i = table.size() - 1
+	while (current_money < table[i]):
+		i-=1
+		var_for_money = table[i]
+	return var_for_money
+
+
+
+func end_game():
+	get_node("Camera2D").position.x += -1175
+	get_node("endgame/end_screen/end_label").text = "Поздравляем вам с окончанием игры. \n \n Вы выиграли " + str(get_node("Money/amount").money) + "$ \n \n Рекорд этой игры - " + str(max_score_check(get_node("Money/amount").money)) + "$" + "\n \n Продолжайте учиться, и может вы выиграете миллион долларов"
+	get_node("Money/amount").money = 1
+
+func max_score_check(score):
+	var file
+	#Создаем файл если его нет
+	if not FileAccess.file_exists("user://save_score.dat"):
+		file = FileAccess.open("user://save_score.dat", FileAccess.WRITE)
+		file.store_string("0")
+		file.close()
+	#Читаем 
+	file = FileAccess.open("user://save_score.dat", FileAccess.READ)
+	var content = int(file.get_as_text())
+	file.close()
+	#если побили рекорд - перезаписываем
+	if score > content:
+		file = FileAccess.open("user://save_score.dat", FileAccess.WRITE)
+		file.store_string(str(score))
+		file.close()
+		return score
+	return content

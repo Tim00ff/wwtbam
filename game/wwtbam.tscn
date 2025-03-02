@@ -12,8 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://dy3gnncccb0qc" path="res://audio/khsm_q1-5-wrong.mp3" id="7_qbd1y"]
 [ext_resource type="Script" path="res://scripts/wwtbam/amount.gd" id="7_u7661"]
 [ext_resource type="AudioStream" uid="uid://d28oxupbvoee5" path="res://audio/khsm_q1-5-correct-o.mp3" id="8_4xnfv"]
-[ext_resource type="Texture2D" uid="uid://dca40k26ykqd6" path="res://icon.svg" id="12_drsow"]
 [ext_resource type="Texture2D" uid="uid://bpdvigeyf3o5c" path="res://fon.png" id="13_tfo2d"]
+[ext_resource type="Script" path="res://scripts/start/start.gd" id="14_7hduf"]
 
 [sub_resource type="Animation" id="Animation_1am8d"]
 length = 0.001
@@ -104,6 +104,8 @@ script = ExtResource("1_8cg4m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
 script = ExtResource("2_rm4fw")
 
 [node name="sounds" type="Node" parent="."]
@@ -240,10 +242,6 @@ vertical_alignment = 1
 autowrap_mode = 3
 metadata/_edit_lock_ = true
 
-[node name="Icon" type="Sprite2D" parent="Answers"]
-position = Vector2(-255, 945)
-texture = ExtResource("12_drsow")
-
 [node name="Question" type="Node2D" parent="."]
 
 [node name="Question_sprite" type="Sprite2D" parent="Question"]
@@ -341,8 +339,69 @@ texture = ExtResource("13_tfo2d")
 polygon = PackedVector2Array(-1750.14, -257.533, -1750.14, 1470.08, 1615.51, 1480.81, 1624, -280)
 metadata/_edit_lock_ = true
 
+[node name="endgame" type="Node2D" parent="."]
+
+[node name="Temporary bg" type="Sprite2D" parent="endgame"]
+position = Vector2(-600, 324)
+scale = Vector2(115.2, 64.8)
+texture = ExtResource("6_s3mr8")
+metadata/_edit_lock_ = true
+
+[node name="start" type="TextureButton" parent="endgame"]
+self_modulate = Color(1, 1, 1, 0.490196)
+offset_left = -920.0
+offset_top = 500.0
+offset_right = -370.0
+offset_bottom = 560.0
+scale = Vector2(1.2, 1.2)
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("4_hpwlj")
+texture_pressed = ExtResource("4_hpwlj")
+texture_hover = ExtResource("4_hpwlj")
+texture_disabled = ExtResource("4_hpwlj")
+texture_focused = ExtResource("4_hpwlj")
+stretch_mode = 0
+script = ExtResource("14_7hduf")
+
+[node name="Label" type="Label" parent="endgame/start"]
+layout_mode = 0
+offset_right = 550.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "Играть еще?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="end_screen" type="Node2D" parent="endgame"]
+position = Vector2(-1175, 0)
+
+[node name="Question_sprite" type="Sprite2D" parent="endgame/end_screen"]
+position = Vector2(580, 304)
+scale = Vector2(108, 25.6)
+texture = ExtResource("4_hpwlj")
+
+[node name="end_label" type="Label" parent="endgame/end_screen"]
+offset_left = 56.0
+offset_top = 192.0
+offset_right = 1104.0
+offset_bottom = 419.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
+theme_override_font_sizes/font_size = 20
+text = "Поздравляем вам с окончанием игры.
+
+Вы выиграли {} Денег"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [connection signal="finished" from="sounds/startup sound" to="sounds/background sound" method="_on_startup_sound_finished"]
 [connection signal="button_up" from="Answers/option1" to="." method="_on_option_1_button_up"]
 [connection signal="button_up" from="Answers/option2" to="." method="_on_option_2_button_up"]
 [connection signal="button_up" from="Answers/option3" to="." method="_on_option_3_button_up"]
 [connection signal="button_up" from="Answers/option4" to="." method="_on_option_4_button_up"]
+[connection signal="button_up" from="Money/take money" to="." method="_on_take_money_button_up"]
+[connection signal="button_up" from="endgame/start" to="endgame/start" method="_on_button_up"]
