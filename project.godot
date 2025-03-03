@@ -10,11 +10,18 @@ config_version=5
 
 [application]
 
-config/name="WWTBAM4VGU"
+config/name="Millonaire game"
+config/version="1.0.0"
 run/main_scene="res://game/start.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://godot.ico"
+config/macos_native_icon="res://godot.ico"
+config/windows_native_icon="res://godot.ico"
 
 [display]
 
 window/stretch/mode="viewport"
+
+[editor]
+
+export/convert_text_resources_to_binary=false

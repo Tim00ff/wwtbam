@@ -144,7 +144,7 @@ offset_bottom = -6.0
 [node name="White" type="Sprite2D" parent="Answers"]
 self_modulate = Color(1, 1, 0, 0.521569)
 z_index = 1
-position = Vector2(865, 473)
+position = Vector2(295, 964)
 scale = Vector2(0.992308, 0.952381)
 texture = ExtResource("9_u2kjc")
 
@@ -301,10 +301,11 @@ stretch_mode = 0
 
 [node name="Label" type="Label" parent="Money/take money"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 75.0
-offset_right = 67.0
-offset_bottom = 98.0
+offset_left = -15.0
+offset_top = 77.0
+offset_right = 113.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("5_hhv0y")
 text = "Забрать "
 
 [node name="Door" type="Sprite2D" parent="Money"]

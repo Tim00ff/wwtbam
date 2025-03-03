@@ -7,7 +7,7 @@ var record
 
 
 func _ready() -> void:
-	questions = load_questions("res://questions/questions.txt")
+	questions = load_questions("res://questions/questions.res")
 	change_question(questions)
 
 func load_questions(file_path: String) -> Array:
