@@ -20,7 +20,7 @@ config/windows_native_icon="res://godot.ico"
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [editor]
 

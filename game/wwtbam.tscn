@@ -10,7 +10,6 @@
 [ext_resource type="AudioStream" uid="uid://dy3gnncccb0qc" path="res://audio/khsm_q1-5-wrong.mp3" id="7_qbd1y"]
 [ext_resource type="Script" path="res://scripts/wwtbam/amount.gd" id="7_u7661"]
 [ext_resource type="AudioStream" uid="uid://d28oxupbvoee5" path="res://audio/khsm_q1-5-correct-o.mp3" id="8_4xnfv"]
-[ext_resource type="Texture2D" uid="uid://c4yn4shn7d5rr" path="res://sprites/ilyfa toys/for_police.png" id="9_u2kjc"]
 [ext_resource type="Texture2D" uid="uid://dkyuua1gcchqd" path="res://sprites/ilyfa toys/option_white.svg" id="10_cu2yi"]
 [ext_resource type="Texture2D" uid="uid://cfmaahe2gff5y" path="res://sprites/ilyfa toys/pot.png" id="10_fcisg"]
 [ext_resource type="Texture2D" uid="uid://de4x5eghfue24" path="res://sprites/ilyfa toys/option.svg" id="10_ulsvx"]
@@ -22,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://by11aa53bxnag" path="res://sprites/ilyfa toys/cash.png" id="16_j45yf"]
 [ext_resource type="Texture2D" uid="uid://dh1ct2fiwewct" path="res://sprites/ilyfa toys/door.svg" id="17_jn3u4"]
 [ext_resource type="Texture2D" uid="uid://covktttdtjkof" path="res://sprites/white.png" id="19_bvswu"]
+[ext_resource type="Script" path="res://scripts/wwtbam/stages.gd" id="22_6ptv8"]
 
 [sub_resource type="Animation" id="Animation_1am8d"]
 length = 0.001
@@ -108,7 +108,6 @@ _data = {
 }
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tevpq"]
-load_path = "res://.godot/imported/quest-1.png-3da413c9392fcfa29c0038998e05ff31.ctex"
 
 [node name="WWTBAM" type="Node2D"]
 scale = Vector2(4, 4)
@@ -118,7 +117,7 @@ script = ExtResource("1_8cg4m")
 anchor_mode = 0
 zoom = Vector2(0.25, 0.25)
 position_smoothing_enabled = true
-position_smoothing_speed = 20.0
+position_smoothing_speed = 10.0
 script = ExtResource("2_rm4fw")
 
 [node name="sounds" type="Node" parent="."]
@@ -150,13 +149,6 @@ anchors_preset = 0
 offset_top = -6.0
 offset_bottom = -6.0
 
-[node name="White2" type="Sprite2D" parent="Answers"]
-self_modulate = Color(1, 1, 0, 0.521569)
-z_index = 1
-position = Vector2(636.731, 1894.1)
-scale = Vector2(0.984675, 0.90703)
-texture = ExtResource("9_u2kjc")
-
 [node name="White" type="Sprite2D" parent="Answers"]
 self_modulate = Color(1, 1, 0, 0.521569)
 z_index = 1
@@ -164,7 +156,15 @@ position = Vector2(860.625, 477.5)
 scale = Vector2(0.993914, 0.979351)
 texture = ExtResource("10_cu2yi")
 
+[node name="White2" type="Sprite2D" parent="Answers"]
+self_modulate = Color(1, 1, 0, 0.521569)
+z_index = 1
+position = Vector2(1458, -850)
+scale = Vector2(0.994, 0.979)
+texture = ExtResource("10_cu2yi")
+
 [node name="option1" type="TextureButton" parent="Answers"]
+self_modulate = Color(1, 0.498039, 0.0235294, 1)
 layout_mode = 0
 offset_left = 28.0
 offset_top = 537.0
@@ -190,6 +190,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="option2" type="TextureButton" parent="Answers"]
+self_modulate = Color(1, 0.498039, 0.0235294, 1)
 layout_mode = 0
 offset_left = 605.0
 offset_top = 537.75
@@ -215,6 +216,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="option3" type="TextureButton" parent="Answers"]
+self_modulate = Color(1, 0.498039, 0.0235294, 1)
 layout_mode = 0
 offset_left = 28.0
 offset_top = 422.0
@@ -240,6 +242,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="option4" type="TextureButton" parent="Answers"]
+self_modulate = Color(1, 0.498039, 0.0235294, 1)
 layout_mode = 0
 offset_left = 605.0
 offset_top = 420.75
@@ -267,6 +270,7 @@ autowrap_mode = 3
 [node name="Question" type="Node2D" parent="."]
 
 [node name="Question_sprite" type="Sprite2D" parent="Question"]
+self_modulate = Color(1, 0.498039, 0.0235294, 1)
 position = Vector2(579, 337)
 scale = Vector2(1.01848, 1.01809)
 texture = ExtResource("13_snkra")
@@ -298,7 +302,7 @@ offset_right = 1139.0
 offset_bottom = 153.0
 theme_override_fonts/font = ExtResource("5_hhv0y")
 theme_override_font_sizes/font_size = 20
-text = "1 Br"
+text = "0 Br"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -399,10 +403,12 @@ texture = ExtResource("16_j45yf")
 
 [node name="Progress bar" type="Node2D" parent="."]
 position = Vector2(112, 48)
+script = ExtResource("22_6ptv8")
 
 [node name="Sec1" type="Node2D" parent="Progress bar"]
 
 [node name="subsec1" type="Sprite2D" parent="Progress bar/Sec1"]
+self_modulate = Color(0, 0, 1, 1)
 position = Vector2(264, 40)
 scale = Vector2(1.3, 4.2)
 texture = ExtResource("19_bvswu")

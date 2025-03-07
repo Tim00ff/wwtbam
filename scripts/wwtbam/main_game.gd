@@ -2,13 +2,20 @@ extends Node2D
 var questions = 0
 var answers_arr
 var correct_answer
+var difficulty
+
+var current_stage 
 
 var record
 
+var answ_pos = [Vector2(283.75, 477.5), Vector2(860.75, 477.5), Vector2(284, 362.5), Vector2(860.75, 360.5)]
 
 func _ready() -> void:
 	questions = load_questions("res://questions/questions.res")
-	change_question(questions)
+	current_stage = 1
+	difficulty = 1
+	change_question(questions, 1)
+	get_node('Progress bar').update_colours(current_stage)
 
 func load_questions(file_path: String) -> Array:
 	var questions_array = []  
@@ -23,7 +30,7 @@ func load_questions(file_path: String) -> Array:
 		if i + 5 >= lines.size():
 			break 
 		var question_data = [
-			lines[i].strip_edges(),      # Difficulty
+			lines[i].strip_edges().split(' '),      # Difficulty
 			lines[i + 1].strip_edges(),  # Question
 			lines[i + 2].strip_edges(),  # Correct answer
 			lines[i + 3].strip_edges(),  # Wrong answer 1
@@ -34,12 +41,22 @@ func load_questions(file_path: String) -> Array:
 	return questions_array
 
 
-func change_question(questions):
+func change_question(questions, difficulty):
 	if questions:
 		randomize()
 		var q = questions.pick_random()
+		if not q[0][1] == str(difficulty):
+			change_question(questions, difficulty)
 		questions.erase(q)
 		get_node("Question/Question label").text = q[1]
+		if q[1].length() < 70: 
+			get_node("Question/Question label").set("theme_override_font_sizes/font_size", 50)
+		elif(q[1].length() < 130):
+			get_node("Question/Question label").set("theme_override_font_sizes/font_size", 40)
+		elif(q[1].length() < 170):
+			get_node("Question/Question label").set("theme_override_font_sizes/font_size", 30)
+		else:
+			get_node("Question/Question label").set("theme_override_font_sizes/font_size", 24)
 		answers_arr = [q[2], q[3], q[4], q[5]]
 		answers_arr.shuffle()
 		correct_answer = answers_arr.find(q[2])
@@ -47,6 +64,15 @@ func change_question(questions):
 		get_node("Answers/option2/Label").text = answers_arr[1]
 		get_node("Answers/option3/Label").text = answers_arr[2]
 		get_node("Answers/option4/Label").text = answers_arr[3]
+		
+		var answer_sizings = [[12, 50], [20, 44], [33, 38], [40, 30], [50, 26], [90000, 18]]
+		var objects = [get_node("Answers/option1/Label"), get_node("Answers/option2/Label"), get_node("Answers/option3/Label"), get_node("Answers/option4/Label")]
+		for item in objects:
+			var i = 0
+			while answer_sizings[i][0] < item.text.length():
+				i = i + 1
+			item.set("theme_override_font_sizes/font_size", answer_sizings[i][1])
+		
 		get_node('Answers/White').position = Vector2(0, -10000)
 	else:
 		return
@@ -87,22 +113,30 @@ func _on_option_4_button_up() -> void:
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(3)
 
+func next_stage():
+	current_stage += 1
+	if current_stage == 6 or current_stage == 11:
+		difficulty += 1
+	get_node('Progress bar').update_colours(current_stage)
 
 func is_answer_right(option_id):
 	if option_id == correct_answer:
-		pass
 		get_node('Answers/White').self_modulate = '#0aff00a2'
 		get_node('sounds/right').playing = true
 		await get_tree().create_timer(1.5).timeout
 		get_node('Money/amount').update_money()
-		change_question(questions)
+		next_stage()
+		change_question(questions, difficulty)
 		reset()
 	else:
 		get_node('Answers/White').self_modulate = '#AF1B3Fa2'
 		get_node('sounds/wrong').playing = true
-		await get_tree().create_timer(1.5).timeout
-		get_node("Money/amount").money = on_death_money(get_node("Money/amount").money) / 2 # Делим на 2, потому что метод update money умножает на 2.
-		get_node("Money/amount").update_money()
+		await get_tree().create_timer(1).timeout
+		get_node('Answers/White2').position = answ_pos[correct_answer]
+		get_node('Answers/White2').self_modulate = '#0aff00a2'
+		await get_tree().create_timer(4).timeout
+		get_node('Answers/White2').position = Vector2(-1000, -1000)
+		get_node("Money/amount").set_money(on_death_money(get_node("Money/amount").money)) #updating money if we lost
 		end_game()
 
 func reset():
@@ -130,7 +164,7 @@ func _on_take_money_button_up() -> void:
 
 func on_death_money(current_money):
 	var var_for_money = current_money
-	var table = [0, 8, 32, 256, 1024, 16000, 150000, 1000000]
+	var table = [0, 1000, 3200]
 	var i = table.size() - 1
 	while (current_money < table[i]):
 		i-=1
