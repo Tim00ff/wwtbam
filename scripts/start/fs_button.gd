@@ -1,6 +1,6 @@
 extends TextureButton
-var texture1 = preload("res://pluspsd.png")
-var texture2 = preload("res://minus.png")
+var texture1 = preload("res://sprites/ilyfa toys/pluspsd.png")
+var texture2 = preload("res://sprites/ilyfa toys/minus.png")
 
 
 

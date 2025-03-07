@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4yn4shn7d5rr"
-path="res://.godot/imported/for_police.png-1a33f5e4c60943cd03ba00c01f8c2df3.ctex"
+uid="uid://de8f388jjpwjk"
+path="res://.godot/imported/back.png-ae3114dc83bc65157339fb257bcf0bf1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://for_police.png"
-dest_files=["res://.godot/imported/for_police.png-1a33f5e4c60943cd03ba00c01f8c2df3.ctex"]
+source_file="res://sprites/ilyfa toys/back.png"
+dest_files=["res://.godot/imported/back.png-ae3114dc83bc65157339fb257bcf0bf1.ctex"]
 
 [params]
 

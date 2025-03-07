@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwux8c6mh2w35"
-path="res://.godot/imported/pluspsd.png-21dbf6e07d62869ad15ea1a3d991f511.ctex"
+path="res://.godot/imported/pluspsd.png-632d7958a83c869971b35232613c061f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pluspsd.png"
-dest_files=["res://.godot/imported/pluspsd.png-21dbf6e07d62869ad15ea1a3d991f511.ctex"]
+source_file="res://sprites/ilyfa toys/pluspsd.png"
+dest_files=["res://.godot/imported/pluspsd.png-632d7958a83c869971b35232613c061f.ctex"]
 
 [params]
 

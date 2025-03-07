@@ -55,7 +55,7 @@ func change_question(questions):
 func _on_option_1_button_up() -> void:
 	get_node('AnimationPlayer').play('option1choice')
 	get_node('Answers/White').z_index = 1
-	get_node('Answers/White').position = Vector2(288.5, 591)
+	get_node('Answers/White').position = Vector2(283.75, 477.5)
 	disable_buttons()
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(0)
@@ -64,7 +64,7 @@ func _on_option_1_button_up() -> void:
 func _on_option_2_button_up() -> void:
 	get_node('AnimationPlayer').play('option1choice')
 	get_node('Answers/White').z_index = 1
-	get_node('Answers/White').position = Vector2(866, 590)
+	get_node('Answers/White').position = Vector2(860.75, 477.5)
 	disable_buttons()
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(1)
@@ -73,7 +73,7 @@ func _on_option_2_button_up() -> void:
 func _on_option_3_button_up() -> void:
 	get_node('AnimationPlayer').play('option1choice')
 	get_node('Answers/White').z_index = 1
-	get_node('Answers/White').position = Vector2(288.5, 476)
+	get_node('Answers/White').position = Vector2(284, 362.5)
 	disable_buttons()
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(2)
@@ -82,7 +82,7 @@ func _on_option_3_button_up() -> void:
 func _on_option_4_button_up() -> void:
 	get_node('AnimationPlayer').play('option1choice')
 	get_node('Answers/White').z_index = 1
-	get_node('Answers/White').position = Vector2(865.5, 473)
+	get_node('Answers/White').position = Vector2(860.75, 360.5)
 	disable_buttons()
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(3)
@@ -141,7 +141,7 @@ func on_death_money(current_money):
 
 func end_game():
 	get_node("Camera2D").position.x += -1175
-	get_node("endgame/end_screen/end_label").text = "Поздравляем вам с окончанием игры. \n \n Вы выиграли " + str(get_node("Money/amount").money) + "$ \n \n Рекорд этой игры - " + str(max_score_check(get_node("Money/amount").money)) + "$" + "\n \n Продолжайте учиться, и может вы выиграете миллион долларов"
+	get_node("endgame/end_screen/end_label").text = "Поздравляем вам с окончанием игры. \n \n Вы выиграли " + str(get_node("Money/amount").money) + " Br \n \n Рекорд этой игры - " + str(max_score_check(get_node("Money/amount").money)) + " Br" + "\n \n Продолжайте учиться, и может вы выиграете миллион долларов"
 	get_node("Money/amount").money = 1
 
 func max_score_check(score):

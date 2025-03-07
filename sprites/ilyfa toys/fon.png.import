@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqxs7segpxdpw"
-path="res://.godot/imported/minus.png-d21bba22d64798567af701129b0a3d20.ctex"
+uid="uid://bpdvigeyf3o5c"
+path="res://.godot/imported/fon.png-e388481fe7cec3e45bd5a54c8bfb1f4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minus.png"
-dest_files=["res://.godot/imported/minus.png-d21bba22d64798567af701129b0a3d20.ctex"]
+source_file="res://sprites/ilyfa toys/fon.png"
+dest_files=["res://.godot/imported/fon.png-e388481fe7cec3e45bd5a54c8bfb1f4f.ctex"]
 
 [params]
 

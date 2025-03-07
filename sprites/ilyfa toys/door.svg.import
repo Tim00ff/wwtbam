@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ukemk53g2ldi"
-path="res://.godot/imported/log2.png-6491f9729ac9bcfd58c988ea89003faf.ctex"
+uid="uid://dh1ct2fiwewct"
+path="res://.godot/imported/door.svg-f5eead6bf53844d03d25d36e7a3d076e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://log2.png"
-dest_files=["res://.godot/imported/log2.png-6491f9729ac9bcfd58c988ea89003faf.ctex"]
+source_file="res://sprites/ilyfa toys/door.svg"
+dest_files=["res://.godot/imported/door.svg-f5eead6bf53844d03d25d36e7a3d076e.ctex"]
 
 [params]
 
@@ -31,4 +31,7 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

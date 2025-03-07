@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de8f388jjpwjk"
-path="res://.godot/imported/back.png-dc81948ada94089b9c87c9a589126020.ctex"
+uid="uid://ukemk53g2ldi"
+path="res://.godot/imported/log2.png-a6ca21d0ddfdb0265cba202f4fda101e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://back.png"
-dest_files=["res://.godot/imported/back.png-dc81948ada94089b9c87c9a589126020.ctex"]
+source_file="res://sprites/ilyfa toys/log2.png"
+dest_files=["res://.godot/imported/log2.png-a6ca21d0ddfdb0265cba202f4fda101e.ctex"]
 
 [params]
 

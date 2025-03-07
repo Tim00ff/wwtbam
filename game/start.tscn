@@ -4,13 +4,13 @@
 [ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://PressStart2P-Regular.ttf" id="2_88jc1"]
 [ext_resource type="Script" path="res://scripts/start/start.gd" id="2_j17x2"]
 [ext_resource type="Script" path="res://scripts/start/exit.gd" id="3_sbu3e"]
-[ext_resource type="Texture2D" uid="uid://ukemk53g2ldi" path="res://log2.png" id="5_ae5x4"]
+[ext_resource type="Texture2D" uid="uid://ukemk53g2ldi" path="res://sprites/ilyfa toys/log2.png" id="5_ae5x4"]
 [ext_resource type="Script" path="res://scripts/start/animation_player.gd" id="5_htksb"]
-[ext_resource type="Texture2D" uid="uid://bpdvigeyf3o5c" path="res://fon.png" id="6_sfcq2"]
+[ext_resource type="Texture2D" uid="uid://bpdvigeyf3o5c" path="res://sprites/ilyfa toys/fon.png" id="6_sfcq2"]
 [ext_resource type="Script" path="res://scripts/start/fs_button.gd" id="7_bh2q0"]
 [ext_resource type="Script" path="res://scripts/start/camera.gd" id="7_hh4lx"]
-[ext_resource type="Texture2D" uid="uid://de8f388jjpwjk" path="res://back.png" id="9_y0qfp"]
-[ext_resource type="Texture2D" uid="uid://cwux8c6mh2w35" path="res://pluspsd.png" id="10_soodu"]
+[ext_resource type="Texture2D" uid="uid://de8f388jjpwjk" path="res://sprites/ilyfa toys/back.png" id="9_y0qfp"]
+[ext_resource type="Texture2D" uid="uid://cwux8c6mh2w35" path="res://sprites/ilyfa toys/pluspsd.png" id="10_soodu"]
 
 [sub_resource type="Animation" id="Animation_x6u8h"]
 length = 0.001

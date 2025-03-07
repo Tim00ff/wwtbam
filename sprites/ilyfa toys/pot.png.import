@@ -2,33 +2,33 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpdvigeyf3o5c"
-path="res://.godot/imported/fon.png-2a3fd5ec797e6cc4296614df54cfcc27.ctex"
+uid="uid://cfmaahe2gff5y"
+path="res://.godot/imported/pot.png-23f808fdf2c39c3633ea412df04ee0c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fon.png"
-dest_files=["res://.godot/imported/fon.png-2a3fd5ec797e6cc4296614df54cfcc27.ctex"]
+source_file="res://sprites/ilyfa toys/pot.png"
+dest_files=["res://.godot/imported/pot.png-23f808fdf2c39c3633ea412df04ee0c4.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=1.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1
-roughness/mode=0
+roughness/mode=5
 roughness/src_normal=""
 process/fix_alpha_border=true
-process/premult_alpha=false
+process/premult_alpha=true
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

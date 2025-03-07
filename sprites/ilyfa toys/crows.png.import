@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tobogod17th"
-path="res://.godot/imported/crows.png-2524abc6610480a669b08dfda7a90bc6.ctex"
+path="res://.godot/imported/crows.png-d009dc28ba2d5a57d0fa6b50b8426e24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://crows.png"
-dest_files=["res://.godot/imported/crows.png-2524abc6610480a669b08dfda7a90bc6.ctex"]
+source_file="res://sprites/ilyfa toys/crows.png"
+dest_files=["res://.godot/imported/crows.png-d009dc28ba2d5a57d0fa6b50b8426e24.ctex"]
 
 [params]
 
