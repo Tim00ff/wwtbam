@@ -64,14 +64,19 @@ func change_question(questions, difficulty):
 		get_node("Answers/option2/Label").text = answers_arr[1]
 		get_node("Answers/option3/Label").text = answers_arr[2]
 		get_node("Answers/option4/Label").text = answers_arr[3]
-		
+		 
 		var answer_sizings = [[12, 50], [20, 44], [33, 38], [40, 30], [50, 26], [90000, 18]]
 		var objects = [get_node("Answers/option1/Label"), get_node("Answers/option2/Label"), get_node("Answers/option3/Label"), get_node("Answers/option4/Label")]
+		var answer_font_size = answer_sizings[0][1]
 		for item in objects:
 			var i = 0
 			while answer_sizings[i][0] < item.text.length():
 				i = i + 1
-			item.set("theme_override_font_sizes/font_size", answer_sizings[i][1])
+			if answer_font_size > answer_sizings[i][1]:
+				answer_font_size = answer_sizings[i][1]
+				
+		for item in objects:
+			item.set("theme_override_font_sizes/font_size", answer_font_size)
 		
 		get_node('Answers/White').position = Vector2(0, -10000)
 	else:
@@ -108,7 +113,7 @@ func _on_option_3_button_up() -> void:
 func _on_option_4_button_up() -> void:
 	get_node('AnimationPlayer').play('option1choice')
 	get_node('Answers/White').z_index = 1
-	get_node('Answers/White').position = Vector2(860.75, 360.5)
+	get_node('Answers/White').position = Vector2(861, 360.75)
 	disable_buttons()
 	await get_tree().create_timer(2.0).timeout
 	is_answer_right(3)
@@ -121,7 +126,7 @@ func next_stage():
 
 func is_answer_right(option_id):
 	if option_id == correct_answer:
-		get_node('Answers/White').self_modulate = '#0aff00a2'
+		get_node('Answers/White').self_modulate = '#87c2329b'
 		get_node('sounds/right').playing = true
 		await get_tree().create_timer(1.5).timeout
 		get_node('Money/amount').update_money()

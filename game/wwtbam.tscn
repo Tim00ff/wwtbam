@@ -5,23 +5,23 @@
 [ext_resource type="Script" path="res://scripts/wwtbam/camera_2d.gd" id="2_rm4fw"]
 [ext_resource type="AudioStream" uid="uid://nu0i3e0hlkyf" path="res://audio/q1-5-bed-2008.mp3" id="2_wturb"]
 [ext_resource type="Script" path="res://scripts/wwtbam/background_sound.gd" id="3_7hgwq"]
-[ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://PressStart2P-Regular.ttf" id="5_hhv0y"]
 [ext_resource type="AudioStream" uid="uid://dqrwo0dyofg05" path="res://audio/khsm_50-50.mp3" id="6_281c4"]
 [ext_resource type="AudioStream" uid="uid://dy3gnncccb0qc" path="res://audio/khsm_q1-5-wrong.mp3" id="7_qbd1y"]
 [ext_resource type="Script" path="res://scripts/wwtbam/amount.gd" id="7_u7661"]
 [ext_resource type="AudioStream" uid="uid://d28oxupbvoee5" path="res://audio/khsm_q1-5-correct-o.mp3" id="8_4xnfv"]
 [ext_resource type="Texture2D" uid="uid://dkyuua1gcchqd" path="res://sprites/ilyfa toys/option_white.svg" id="10_cu2yi"]
-[ext_resource type="Texture2D" uid="uid://cfmaahe2gff5y" path="res://sprites/ilyfa toys/pot.png" id="10_fcisg"]
-[ext_resource type="Texture2D" uid="uid://de4x5eghfue24" path="res://sprites/ilyfa toys/option.svg" id="10_ulsvx"]
-[ext_resource type="Texture2D" uid="uid://tobogod17th" path="res://sprites/ilyfa toys/crows.png" id="13_84qrv"]
-[ext_resource type="Texture2D" uid="uid://cllyvmcadijs" path="res://sprites/ilyfa toys/question.svg" id="13_snkra"]
-[ext_resource type="Texture2D" uid="uid://bpdvigeyf3o5c" path="res://sprites/ilyfa toys/fon.png" id="13_tfo2d"]
+[ext_resource type="Texture2D" uid="uid://ite8hfc3bixf" path="res://sprites/new design/option_new.svg" id="10_o81tl"]
+[ext_resource type="Texture2D" uid="uid://cbsjsirrvvtkp" path="res://sprites/new design/question_new.svg" id="12_e0xqn"]
+[ext_resource type="FontFile" uid="uid://wyqawfli0ko1" path="res://Insight Sans SSi.ttf" id="13_fvp2g"]
 [ext_resource type="Script" path="res://scripts/start/start.gd" id="14_7hduf"]
 [ext_resource type="FontFile" uid="uid://c18qj648br7s" path="res://RussoOne-Regular.ttf" id="14_fvl46"]
-[ext_resource type="Texture2D" uid="uid://by11aa53bxnag" path="res://sprites/ilyfa toys/cash.png" id="16_j45yf"]
+[ext_resource type="Texture2D" uid="uid://s11uio2dhpkl" path="res://sprites/new design/for_money.svg" id="16_8tk68"]
 [ext_resource type="Texture2D" uid="uid://dh1ct2fiwewct" path="res://sprites/ilyfa toys/door.svg" id="17_jn3u4"]
-[ext_resource type="Texture2D" uid="uid://covktttdtjkof" path="res://sprites/white.png" id="19_bvswu"]
+[ext_resource type="Texture2D" uid="uid://bcam22livnaye" path="res://sprites/new design/progress.svg" id="19_r1o14"]
+[ext_resource type="Texture2D" uid="uid://dwr5tmjssfcu5" path="res://sprites/new design/money_in_progress.svg" id="20_jio4w"]
+[ext_resource type="Texture2D" uid="uid://dsyf1t1d0g8x8" path="res://sprites/fon details/dirty_fon.svg" id="21_0yvl1"]
 [ext_resource type="Script" path="res://scripts/wwtbam/stages.gd" id="22_6ptv8"]
+[ext_resource type="Texture2D" uid="uid://ddpnmrd8llp1n" path="res://sprites/fon details/clear_fon.svg" id="22_18fum"]
 
 [sub_resource type="Animation" id="Animation_1am8d"]
 length = 0.001
@@ -107,7 +107,8 @@ _data = {
 "option1choice": SubResource("Animation_dm6i7")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tevpq"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a73xa"]
+load_path = "res://.godot/imported/question_new.svg-98da6ca285515d6c6c05184ce0eb0377.ctex"
 
 [node name="WWTBAM" type="Node2D"]
 scale = Vector2(4, 4)
@@ -148,12 +149,13 @@ layout_mode = 3
 anchors_preset = 0
 offset_top = -6.0
 offset_bottom = -6.0
+metadata/_edit_use_anchors_ = true
 
 [node name="White" type="Sprite2D" parent="Answers"]
 self_modulate = Color(1, 1, 0, 0.521569)
 z_index = 1
-position = Vector2(860.625, 477.5)
-scale = Vector2(0.993914, 0.979351)
+position = Vector2(861, 360.75)
+scale = Vector2(0.993914, 0.985988)
 texture = ExtResource("10_cu2yi")
 
 [node name="White2" type="Sprite2D" parent="Answers"]
@@ -164,7 +166,6 @@ scale = Vector2(0.994, 0.979)
 texture = ExtResource("10_cu2yi")
 
 [node name="option1" type="TextureButton" parent="Answers"]
-self_modulate = Color(1, 0.498039, 0.0235294, 1)
 layout_mode = 0
 offset_left = 28.0
 offset_top = 537.0
@@ -172,8 +173,9 @@ offset_right = 548.0
 offset_bottom = 642.0
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_ulsvx")
+texture_normal = ExtResource("10_o81tl")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Answers/option1"]
 layout_mode = 0
@@ -188,9 +190,9 @@ text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvhvhvjASVDJHSAVDJASHVDvhvhv
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="option2" type="TextureButton" parent="Answers"]
-self_modulate = Color(1, 0.498039, 0.0235294, 1)
 layout_mode = 0
 offset_left = 605.0
 offset_top = 537.75
@@ -198,8 +200,9 @@ offset_right = 1130.0
 offset_bottom = 647.75
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_ulsvx")
+texture_normal = ExtResource("10_o81tl")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Answers/option2"]
 layout_mode = 0
@@ -214,9 +217,9 @@ text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="option3" type="TextureButton" parent="Answers"]
-self_modulate = Color(1, 0.498039, 0.0235294, 1)
 layout_mode = 0
 offset_left = 28.0
 offset_top = 422.0
@@ -224,8 +227,9 @@ offset_right = 548.0
 offset_bottom = 527.0
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_ulsvx")
+texture_normal = ExtResource("10_o81tl")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Answers/option3"]
 layout_mode = 0
@@ -240,9 +244,9 @@ text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="option4" type="TextureButton" parent="Answers"]
-self_modulate = Color(1, 0.498039, 0.0235294, 1)
 layout_mode = 0
 offset_left = 605.0
 offset_top = 420.75
@@ -250,8 +254,9 @@ offset_right = 1130.0
 offset_bottom = 530.75
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_ulsvx")
+texture_normal = ExtResource("10_o81tl")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Answers/option4"]
 layout_mode = 0
@@ -266,14 +271,14 @@ text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Question" type="Node2D" parent="."]
 
 [node name="Question_sprite" type="Sprite2D" parent="Question"]
-self_modulate = Color(1, 0.498039, 0.0235294, 1)
-position = Vector2(579, 337)
+position = Vector2(579, 273.25)
 scale = Vector2(1.01848, 1.01809)
-texture = ExtResource("13_snkra")
+texture = ExtResource("12_e0xqn")
 
 [node name="Question label" type="Label" parent="Question"]
 offset_left = 54.75
@@ -286,27 +291,24 @@ text = "WABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Crows" type="Sprite2D" parent="Question"]
-position = Vector2(-616, 112)
-texture = ExtResource("13_84qrv")
-
 [node name="Help" type="Node2D" parent="."]
 
 [node name="Money" type="Node2D" parent="."]
 
 [node name="amount" type="Label" parent="Money"]
-self_modulate = Color(0, 1, 0, 1)
-offset_left = 979.0
-offset_top = 89.0
-offset_right = 1139.0
-offset_bottom = 153.0
-theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 20
+self_modulate = Color(0.529412, 0.760784, 0.196078, 1)
+offset_left = 950.0
+offset_top = 48.0
+offset_right = 1110.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("13_fvp2g")
+theme_override_font_sizes/font_size = 24
 text = "0 Br"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 script = ExtResource("7_u7661")
+metadata/_edit_use_anchors_ = true
 
 [node name="take money" type="TextureButton" parent="Money"]
 offset_left = -32.0
@@ -318,6 +320,7 @@ action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("17_jn3u4")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Money"]
 offset_left = 48.0
@@ -327,21 +330,18 @@ offset_bottom = 123.0
 theme_override_fonts/font = ExtResource("14_fvl46")
 theme_override_font_sizes/font_size = 18
 text = "Забрать "
+metadata/_edit_use_anchors_ = true
+
+[node name="ForMoney" type="Sprite2D" parent="Money"]
+show_behind_parent = true
+position = Vector2(1144, 74)
+texture = ExtResource("16_8tk68")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 deterministic = true
 libraries = {
 "": SubResource("AnimationLibrary_pb4j3")
 }
-
-[node name="bg" type="Polygon2D" parent="."]
-z_index = -2
-texture_repeat = 3
-position = Vector2(-36, -51)
-scale = Vector2(0.772512, 0.745536)
-texture = ExtResource("13_tfo2d")
-polygon = PackedVector2Array(-1750.14, -257.533, -1750.14, 1470.08, 1615.51, 1480.81, 1624, -280)
-metadata/_edit_lock_ = true
 
 [node name="endgame" type="Node2D" parent="."]
 
@@ -351,43 +351,45 @@ scale = Vector2(115.2, 64.8)
 metadata/_edit_lock_ = true
 
 [node name="start" type="TextureButton" parent="endgame"]
-offset_left = -926.0
-offset_top = 500.0
-offset_right = -376.0
-offset_bottom = 560.0
-scale = Vector2(1.2, 1.2)
+offset_left = -826.0
+offset_top = 488.0
+offset_right = -276.0
+offset_bottom = 598.0
+scale = Vector2(0.794595, 0.794595)
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_fcisg")
+texture_normal = ExtResource("10_o81tl")
 stretch_mode = 0
 script = ExtResource("14_7hduf")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="endgame/start"]
 layout_mode = 0
 offset_right = 550.0
 offset_bottom = 104.0
-theme_override_fonts/font = ExtResource("5_hhv0y")
-theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_font_sizes/font_size = 24
 text = "Играть еще?"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="end_screen" type="Node2D" parent="endgame"]
 position = Vector2(-1175, 0)
 
 [node name="Question_sprite" type="Sprite2D" parent="endgame/end_screen"]
-position = Vector2(500, 345)
-scale = Vector2(0.881185, 0.624074)
-texture = SubResource("CompressedTexture2D_tevpq")
+position = Vector2(593.755, 268.688)
+scale = Vector2(0.954241, 1.01309)
+texture = SubResource("CompressedTexture2D_a73xa")
 
 [node name="end_label" type="Label" parent="endgame/end_screen"]
-offset_left = 48.0
-offset_top = 192.0
-offset_right = 1096.0
-offset_bottom = 419.0
-theme_override_fonts/font = ExtResource("5_hhv0y")
+offset_left = 55.0
+offset_top = 142.0
+offset_right = 1103.0
+offset_bottom = 369.0
+theme_override_fonts/font = ExtResource("14_fvl46")
 theme_override_font_sizes/font_size = 20
 text = "Поздравляем вам с окончанием игры.
 
@@ -395,99 +397,129 @@ text = "Поздравляем вам с окончанием игры.
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-
-[node name="Cash" type="Sprite2D" parent="."]
-position = Vector2(1057, 61)
-scale = Vector2(0.373047, 0.205078)
-texture = ExtResource("16_j45yf")
+metadata/_edit_use_anchors_ = true
 
 [node name="Progress bar" type="Node2D" parent="."]
-position = Vector2(112, 48)
+position = Vector2(98, 34)
 script = ExtResource("22_6ptv8")
 
+[node name="ForProgressBar" type="Sprite2D" parent="Progress bar"]
+position = Vector2(463, 38)
+scale = Vector2(1.51442, 1)
+texture = ExtResource("16_8tk68")
+
 [node name="Sec1" type="Node2D" parent="Progress bar"]
+position = Vector2(-86, 0)
 
 [node name="subsec1" type="Sprite2D" parent="Progress bar/Sec1"]
 self_modulate = Color(0, 0, 1, 1)
 position = Vector2(264, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec2" type="Sprite2D" parent="Progress bar/Sec1"]
 position = Vector2(288, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec3" type="Sprite2D" parent="Progress bar/Sec1"]
 position = Vector2(312, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec4" type="Sprite2D" parent="Progress bar/Sec1"]
 position = Vector2(336, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec5" type="Sprite2D" parent="Progress bar/Sec1"]
 position = Vector2(360, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="Sec2" type="Node2D" parent="Progress bar"]
-position = Vector2(136, 0)
+position = Vector2(152, 0)
 
 [node name="subsec1" type="Sprite2D" parent="Progress bar/Sec2"]
 position = Vector2(264, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec2" type="Sprite2D" parent="Progress bar/Sec2"]
 position = Vector2(288, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec3" type="Sprite2D" parent="Progress bar/Sec2"]
 position = Vector2(312, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec4" type="Sprite2D" parent="Progress bar/Sec2"]
 position = Vector2(336, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec5" type="Sprite2D" parent="Progress bar/Sec2"]
 position = Vector2(360, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="Sec3" type="Node2D" parent="Progress bar"]
-position = Vector2(272, 0)
+position = Vector2(388, 0)
 
 [node name="subsec1" type="Sprite2D" parent="Progress bar/Sec3"]
 position = Vector2(264, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec2" type="Sprite2D" parent="Progress bar/Sec3"]
 position = Vector2(288, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec3" type="Sprite2D" parent="Progress bar/Sec3"]
 position = Vector2(312, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec4" type="Sprite2D" parent="Progress bar/Sec3"]
 position = Vector2(336, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
 
 [node name="subsec5" type="Sprite2D" parent="Progress bar/Sec3"]
 position = Vector2(360, 40)
-scale = Vector2(1.3, 4.2)
-texture = ExtResource("19_bvswu")
+texture = ExtResource("19_r1o14")
+
+[node name="MoneyInProgress2" type="Sprite2D" parent="Progress bar"]
+position = Vector2(581.75, 38)
+scale = Vector2(0.969927, 0.969927)
+texture = ExtResource("20_jio4w")
+
+[node name="Label" type="Label" parent="Progress bar/MoneyInProgress2"]
+offset_left = -24.4864
+offset_top = -8.24805
+offset_right = 26.5136
+offset_bottom = 14.752
+theme_override_colors/font_color = Color(0.529412, 0.760784, 0.196078, 1)
+theme_override_fonts/font = ExtResource("13_fvp2g")
+theme_override_font_sizes/font_size = 20
+text = "3200"
+
+[node name="MoneyInProgress" type="Sprite2D" parent="Progress bar"]
+position = Vector2(344.75, 38)
+scale = Vector2(0.984848, 0.984848)
+texture = ExtResource("20_jio4w")
+
+[node name="Label" type="Label" parent="Progress bar/MoneyInProgress"]
+offset_left = -25.1308
+offset_top = -8.37692
+offset_right = 25.8692
+offset_bottom = 14.6231
+theme_override_colors/font_color = Color(0.529412, 0.760784, 0.196078, 1)
+theme_override_fonts/font = ExtResource("13_fvp2g")
+theme_override_font_sizes/font_size = 20
+text = "1000"
+
+[node name="ClearFon" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(610.375, 347)
+scale = Vector2(1.09773, 1.12091)
+texture = ExtResource("22_18fum")
+metadata/_edit_lock_ = true
+
+[node name="DirtyFon" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-590, 348)
+texture = ExtResource("21_0yvl1")
+metadata/_edit_lock_ = true
 
 [connection signal="finished" from="sounds/startup sound" to="sounds/background sound" method="_on_startup_sound_finished"]
 [connection signal="button_up" from="Answers/option1" to="." method="_on_option_1_button_up"]

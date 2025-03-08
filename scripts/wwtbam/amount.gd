@@ -5,7 +5,7 @@ var money = table[index]
 
 
 func update_money():
-	index =+ 1
+	index = index + 1
 	money = table[index]
 	text = str(money) + ' Br'
 
