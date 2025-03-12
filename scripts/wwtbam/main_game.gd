@@ -65,7 +65,7 @@ func change_question(questions, difficulty):
 		get_node("Answers/option3/Label").text = answers_arr[2]
 		get_node("Answers/option4/Label").text = answers_arr[3]
 		 
-		var answer_sizings = [[12, 50], [20, 44], [33, 38], [40, 30], [50, 26], [90000, 18]]
+		var answer_sizings = [[12, 50], [20, 44], [33, 36], [40, 32], [50, 24], [90000, 18]]
 		var objects = [get_node("Answers/option1/Label"), get_node("Answers/option2/Label"), get_node("Answers/option3/Label"), get_node("Answers/option4/Label")]
 		var answer_font_size = answer_sizings[0][1]
 		for item in objects:
@@ -122,6 +122,8 @@ func next_stage():
 	current_stage += 1
 	if current_stage == 6 or current_stage == 11:
 		difficulty += 1
+	if current_stage > 15:
+		end_game()
 	get_node('Progress bar').update_colours(current_stage)
 
 func is_answer_right(option_id):
@@ -155,12 +157,14 @@ func disable_buttons():
 		get_node("Answers/option2").disabled = true
 		get_node("Answers/option3").disabled = true
 		get_node("Answers/option4").disabled = true
+		get_node("Money/take money").disabled = true
 
 func enable_buttons():
 		get_node("Answers/option1").disabled = false
 		get_node("Answers/option2").disabled = false
 		get_node("Answers/option3").disabled = false
 		get_node("Answers/option4").disabled = false
+		get_node("Money/take money").disabled = false
 
 
 func _on_take_money_button_up() -> void:

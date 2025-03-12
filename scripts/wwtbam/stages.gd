@@ -1,5 +1,5 @@
 extends Node2D
-var sec = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] 
+var sec = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] 
 var green = '00ff0f'
 var yellow = 'ffff00'
 var red = 'ff0000'
@@ -27,6 +27,7 @@ func _ready():
 	sec[13] = get_node('Sec3/subsec3')
 	sec[14] = get_node('Sec3/subsec4')
 	sec[15] = get_node('Sec3/subsec5')
+	sec[16] = get_node('Sec3/subsec5')
 
 func update_colours(secs):
 	for i in range(1, secs):
