@@ -11,8 +11,8 @@ var record
 var answ_pos = [Vector2(283.75, 477.5), Vector2(860.75, 477.5), Vector2(284, 362.5), Vector2(860.75, 360.5)]
 
 func _ready() -> void:
-	questions = load_questions("res://questions/questions.res")
-	current_stage = 1
+	questions = load_questions("res://questions/questions_snitch.res")
+	current_stage = 8
 	difficulty = 1
 	change_question(questions, 1)
 	get_node('Progress bar').update_colours(current_stage)
@@ -47,6 +47,7 @@ func change_question(questions, difficulty):
 		var q = questions.pick_random()
 		if not q[0][1] == str(difficulty):
 			change_question(questions, difficulty)
+			return
 		questions.erase(q)
 		get_node("Question/Question label").text = q[1]
 		if q[1].length() < 70: 

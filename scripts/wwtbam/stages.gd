@@ -1,7 +1,7 @@
 extends Node2D
 var sec = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] 
 var green = '00ff0f'
-var yellow = 'ffff00'
+var yellow = 'FFFF00'
 var red = 'ff0000'
 var current = '0000ff'
 var colours = [0, 
