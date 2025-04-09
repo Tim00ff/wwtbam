@@ -1,16 +1,16 @@
 [gd_scene load_steps=15 format=3 uid="uid://cp5pouep4ov0l"]
 
 [ext_resource type="Texture2D" uid="uid://o8k0elyht3kk" path="res://sprites/Black.png" id="1_g071l"]
-[ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://PressStart2P-Regular.ttf" id="2_88jc1"]
+[ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://fonts/PressStart2P-Regular.ttf" id="2_88jc1"]
 [ext_resource type="Script" path="res://scripts/start/start.gd" id="2_j17x2"]
 [ext_resource type="Script" path="res://scripts/start/exit.gd" id="3_sbu3e"]
-[ext_resource type="Texture2D" uid="uid://ukemk53g2ldi" path="res://sprites/ilyfa toys/log2.png" id="5_ae5x4"]
 [ext_resource type="Script" path="res://scripts/start/animation_player.gd" id="5_htksb"]
-[ext_resource type="Texture2D" uid="uid://bpdvigeyf3o5c" path="res://sprites/ilyfa toys/fon.png" id="6_sfcq2"]
 [ext_resource type="Script" path="res://scripts/start/fs_button.gd" id="7_bh2q0"]
 [ext_resource type="Script" path="res://scripts/start/camera.gd" id="7_hh4lx"]
 [ext_resource type="Texture2D" uid="uid://de8f388jjpwjk" path="res://sprites/ilyfa toys/back.png" id="9_y0qfp"]
+[ext_resource type="Texture2D" uid="uid://djy1vm0ax2gr" path="res://sprites/designer_arts/зеленая планета .png" id="10_8siue"]
 [ext_resource type="Texture2D" uid="uid://cwux8c6mh2w35" path="res://sprites/ilyfa toys/pluspsd.png" id="10_soodu"]
+[ext_resource type="Script" path="res://scripts/start/зеленая_планета.gd" id="11_4yq21"]
 
 [sub_resource type="Animation" id="Animation_x6u8h"]
 length = 0.001
@@ -53,119 +53,8 @@ _data = {
 
 [node name="start_menu" type="Node2D"]
 
-[node name="ItemList" type="ItemList" parent="."]
-self_modulate = Color(1, 1, 1, 0)
-offset_left = 208.0
-offset_right = 940.0
-offset_bottom = 648.0
-
-[node name="start" type="TextureButton" parent="ItemList"]
-self_modulate = Color(1, 1, 1, 0.490196)
-layout_mode = 2
-offset_left = 48.0
-offset_top = 368.0
-offset_right = 598.0
-offset_bottom = 428.0
-scale = Vector2(1.2, 1.2)
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.75
-action_mode = 0
-button_mask = 3
-texture_normal = ExtResource("1_g071l")
-texture_pressed = ExtResource("1_g071l")
-texture_hover = ExtResource("1_g071l")
-texture_disabled = ExtResource("1_g071l")
-texture_focused = ExtResource("1_g071l")
-stretch_mode = 0
-script = ExtResource("2_j17x2")
-
-[node name="Label" type="Label" parent="ItemList/start"]
-layout_mode = 0
-offset_right = 550.0
-offset_bottom = 60.0
-theme_override_fonts/font = ExtResource("2_88jc1")
-theme_override_font_sizes/font_size = 20
-text = "Играть"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="settings" type="TextureButton" parent="ItemList"]
-self_modulate = Color(1, 1, 1, 0.490196)
-layout_mode = 2
-offset_left = 174.0
-offset_top = 471.0
-offset_right = 574.0
-offset_bottom = 531.0
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.75
-action_mode = 0
-button_mask = 3
-texture_normal = ExtResource("1_g071l")
-texture_pressed = ExtResource("1_g071l")
-texture_hover = ExtResource("1_g071l")
-texture_disabled = ExtResource("1_g071l")
-texture_focused = ExtResource("1_g071l")
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="ItemList/settings"]
-layout_mode = 0
-offset_right = 400.0
-offset_bottom = 60.0
-theme_override_fonts/font = ExtResource("2_88jc1")
-theme_override_font_sizes/font_size = 18
-text = "Настройки"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="exit" type="TextureButton" parent="ItemList"]
-self_modulate = Color(1, 1, 1, 0.490196)
-layout_mode = 2
-offset_left = 174.0
-offset_top = 539.0
-offset_right = 574.0
-offset_bottom = 599.0
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.75
-action_mode = 0
-button_mask = 3
-texture_normal = ExtResource("1_g071l")
-texture_pressed = ExtResource("1_g071l")
-texture_hover = ExtResource("1_g071l")
-texture_disabled = ExtResource("1_g071l")
-texture_focused = ExtResource("1_g071l")
-stretch_mode = 0
-script = ExtResource("3_sbu3e")
-
-[node name="Label" type="Label" parent="ItemList/exit"]
-layout_mode = 0
-offset_right = 400.0
-offset_bottom = 60.0
-theme_override_fonts/font = ExtResource("2_88jc1")
-theme_override_font_sizes/font_size = 18
-text = "Выход
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="option4" type="TextureButton" parent="ItemList"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.0983607
-anchor_top = 0.0125196
-anchor_right = -0.0983607
-anchor_bottom = 0.0125196
-offset_left = 96.0
-offset_top = -32.1127
-offset_right = 587.0
-offset_bottom = 258.887
-scale = Vector2(1.4, 1.4)
-action_mode = 0
-button_mask = 3
-texture_normal = ExtResource("5_ae5x4")
-stretch_mode = 6
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../ItemList")
+root_node = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_6o504")
 }
@@ -215,17 +104,143 @@ position = Vector2(-440, 520)
 scale = Vector2(0.390625, 0.390625)
 texture = ExtResource("9_y0qfp")
 
-[node name="bg" type="Polygon2D" parent="."]
-z_index = -2
-texture_repeat = 3
-position = Vector2(-32, -40)
-scale = Vector2(0.772512, 0.745536)
-texture = ExtResource("6_sfcq2")
-polygon = PackedVector2Array(-1895.12, -268.263, -1895.12, 1448.62, 1615.51, 1480.81, 1624, -280)
-metadata/_edit_lock_ = true
+[node name="UI_canvas" type="CanvasLayer" parent="."]
+layer = -1
 
-[connection signal="button_up" from="ItemList/start" to="ItemList/start" method="_on_button_up"]
-[connection signal="button_up" from="ItemList/settings" to="Camera2D" method="_on_settings_button_up"]
-[connection signal="button_up" from="ItemList/exit" to="ItemList/exit" method="_on_button_up"]
+[node name="UI" type="Control" parent="UI_canvas"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="right_bot" type="Container" parent="UI_canvas/UI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="bottom_list" type="Sprite2D" parent="UI_canvas/UI/right_bot"]
+z_index = 1
+position = Vector2(-244, -4)
+scale = Vector2(57, 8.8)
+texture = ExtResource("1_g071l")
+
+[node name="left_top" type="Container" parent="UI_canvas/UI"]
+layout_mode = 1
+
+[node name="top_list" type="Sprite2D" parent="UI_canvas/UI/left_top"]
+z_index = 1
+position = Vector2(284, 44)
+scale = Vector2(57, 8.8)
+texture = ExtResource("1_g071l")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI_canvas/UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.6
+anchor_right = 0.6
+anchor_bottom = 0.8
+offset_left = -99.0
+offset_right = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="Container" parent="UI_canvas/UI/VBoxContainer"]
+layout_mode = 2
+
+[node name="start" type="TextureButton" parent="UI_canvas/UI/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.490196)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("1_g071l")
+texture_pressed = ExtResource("1_g071l")
+texture_hover = ExtResource("1_g071l")
+texture_disabled = ExtResource("1_g071l")
+texture_focused = ExtResource("1_g071l")
+stretch_mode = 0
+script = ExtResource("2_j17x2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="UI_canvas/UI/VBoxContainer/start"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_88jc1")
+theme_override_font_sizes/font_size = 20
+text = "Играть"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="exit" type="TextureButton" parent="UI_canvas/UI/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.490196)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("1_g071l")
+texture_pressed = ExtResource("1_g071l")
+texture_hover = ExtResource("1_g071l")
+texture_disabled = ExtResource("1_g071l")
+texture_focused = ExtResource("1_g071l")
+stretch_mode = 0
+script = ExtResource("3_sbu3e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="UI_canvas/UI/VBoxContainer/exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_88jc1")
+theme_override_font_sizes/font_size = 18
+text = "Выход
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="center" type="Container" parent="UI_canvas/UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.4
+anchor_right = 0.5
+anchor_bottom = 0.4
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ЗеленаяПланета" type="Sprite2D" parent="UI_canvas/UI/center"]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("10_8siue")
+script = ExtResource("11_4yq21")
+
 [connection signal="button_up" from="settings/back" to="Camera2D" method="_on_back_button_up"]
 [connection signal="button_up" from="settings/fs_button" to="settings/fs_button" method="_on_button_up"]
+[connection signal="button_up" from="UI_canvas/UI/VBoxContainer/start" to="UI_canvas/UI/VBoxContainer/start" method="_on_button_up"]
+[connection signal="button_up" from="UI_canvas/UI/VBoxContainer/exit" to="UI_canvas/UI/VBoxContainer/exit" method="_on_button_up"]
