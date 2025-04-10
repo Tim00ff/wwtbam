@@ -14,14 +14,13 @@ config/name="Millonaire game"
 config/version="1.0.0"
 run/main_scene="res://game/start.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://godot.ico"
+config/icon="res://sprites/new design/logo_timoff.png"
 config/macos_native_icon="res://godot.ico"
-config/windows_native_icon="res://godot.ico"
+config/windows_native_icon="res://logo_designer.ico"
 
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor]
 

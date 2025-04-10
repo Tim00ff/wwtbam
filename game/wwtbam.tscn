@@ -522,6 +522,11 @@ position = Vector2(-590, 348)
 texture = ExtResource("21_0yvl1")
 metadata/_edit_lock_ = true
 
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+offset_left = -1152.0
+offset_bottom = 648.0
+border_width = 5.0
+
 [connection signal="finished" from="sounds/startup sound" to="sounds/background sound" method="_on_startup_sound_finished"]
 [connection signal="button_up" from="Answers/option1" to="." method="_on_option_1_button_up"]
 [connection signal="button_up" from="Answers/option2" to="." method="_on_option_2_button_up"]
