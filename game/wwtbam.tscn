@@ -9,20 +9,20 @@
 [ext_resource type="AudioStream" uid="uid://dy3gnncccb0qc" path="res://audio/khsm_q1-5-wrong.mp3" id="7_qbd1y"]
 [ext_resource type="Script" path="res://scripts/wwtbam/amount.gd" id="7_u7661"]
 [ext_resource type="AudioStream" uid="uid://d28oxupbvoee5" path="res://audio/khsm_q1-5-correct-o.mp3" id="8_4xnfv"]
+[ext_resource type="Texture2D" uid="uid://n1etxb64xrwf" path="res://sprites/designer_arts/option_final.svg" id="10_2800u"]
 [ext_resource type="Texture2D" uid="uid://dkyuua1gcchqd" path="res://sprites/ilyfa toys/option_white.svg" id="10_cu2yi"]
-[ext_resource type="Texture2D" uid="uid://ite8hfc3bixf" path="res://sprites/new design/option_new.svg" id="10_o81tl"]
 [ext_resource type="FontFile" uid="uid://dj1ssecemx0dx" path="res://fonts/Arsenal-Bold.ttf" id="11_u3g0a"]
-[ext_resource type="Texture2D" uid="uid://cbsjsirrvvtkp" path="res://sprites/new design/question_new.svg" id="12_e0xqn"]
+[ext_resource type="Texture2D" uid="uid://cct1l0o8m4x13" path="res://sprites/designer_arts/question_final.svg" id="12_ue1s6"]
 [ext_resource type="FontFile" uid="uid://wyqawfli0ko1" path="res://fonts/Insight Sans SSi.ttf" id="13_fvp2g"]
 [ext_resource type="Script" path="res://scripts/start/start.gd" id="14_7hduf"]
 [ext_resource type="FontFile" uid="uid://c18qj648br7s" path="res://fonts/RussoOne-Regular.ttf" id="14_fvl46"]
-[ext_resource type="Texture2D" uid="uid://s11uio2dhpkl" path="res://sprites/new design/for_money.svg" id="16_8tk68"]
 [ext_resource type="Texture2D" uid="uid://bglrbka224qgu" path="res://sprites/designer_arts/кнопка - не нажато.png" id="17_eivdc"]
 [ext_resource type="Texture2D" uid="uid://dh1ct2fiwewct" path="res://sprites/ilyfa toys/door.svg" id="17_jn3u4"]
 [ext_resource type="Texture2D" uid="uid://x75fgtopt1d7" path="res://sprites/designer_arts/кнопка - нажато 1.png" id="18_khqfq"]
 [ext_resource type="Texture2D" uid="uid://bcam22livnaye" path="res://sprites/new design/progress.svg" id="19_r1o14"]
 [ext_resource type="Texture2D" uid="uid://dwr5tmjssfcu5" path="res://sprites/new design/money_in_progress.svg" id="20_jio4w"]
 [ext_resource type="Script" path="res://scripts/wwtbam/stages.gd" id="22_6ptv8"]
+[ext_resource type="Texture2D" uid="uid://b6fqc2r3hngd1" path="res://sprites/designer_arts/for_money_final.svg" id="22_xreej"]
 [ext_resource type="Texture2D" uid="uid://djy1vm0ax2gr" path="res://sprites/designer_arts/зеленая планета .png" id="24_42j47"]
 [ext_resource type="Script" path="res://scripts/start/зеленая_планета.gd" id="25_c5eys"]
 [ext_resource type="Texture2D" uid="uid://d35popwqysic7" path="res://sprites/designer_arts/круги.png" id="26_bgyx7"]
@@ -174,7 +174,7 @@ offset_right = 548.0
 offset_bottom = 642.0
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_o81tl")
+texture_normal = ExtResource("10_2800u")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
@@ -184,6 +184,7 @@ offset_left = 8.0
 offset_top = 7.0
 offset_right = 515.0
 offset_bottom = 102.0
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
 theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvhvhvjASVDJHSAVDJASHVDvhvhv
@@ -201,7 +202,7 @@ offset_right = 1130.0
 offset_bottom = 647.75
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_o81tl")
+texture_normal = ExtResource("10_2800u")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
@@ -211,6 +212,7 @@ offset_left = 7.0
 offset_top = 6.5
 offset_right = 514.0
 offset_bottom = 101.5
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
 theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
@@ -228,7 +230,7 @@ offset_right = 548.0
 offset_bottom = 527.0
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_o81tl")
+texture_normal = ExtResource("10_2800u")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
@@ -238,6 +240,7 @@ offset_left = 8.0
 offset_top = 5.75
 offset_right = 515.0
 offset_bottom = 100.75
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
 theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
@@ -255,7 +258,7 @@ offset_right = 1130.0
 offset_bottom = 530.75
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_o81tl")
+texture_normal = ExtResource("10_2800u")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
@@ -265,6 +268,7 @@ offset_left = 6.0
 offset_top = 5.5
 offset_right = 513.0
 offset_bottom = 100.5
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
 theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
@@ -279,13 +283,14 @@ metadata/_edit_use_anchors_ = true
 [node name="Question_sprite" type="Sprite2D" parent="Question"]
 position = Vector2(579, 273.25)
 scale = Vector2(1.01848, 1.01809)
-texture = ExtResource("12_e0xqn")
+texture = ExtResource("12_ue1s6")
 
 [node name="Question label" type="Label" parent="Question"]
 offset_left = 54.75
 offset_top = 161.25
 offset_right = 1102.75
 offset_bottom = 389.25
+theme_override_colors/font_color = Color(0.380392, 0.537255, 0.188235, 1)
 theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "WABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUB"
@@ -297,7 +302,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Money" type="Node2D" parent="."]
 
 [node name="amount" type="Label" parent="Money"]
-self_modulate = Color(0.529412, 0.760784, 0.196078, 1)
+self_modulate = Color(0.423529, 0.568627, 0.243137, 1)
 offset_left = 950.0
 offset_top = 48.0
 offset_right = 1110.0
@@ -336,7 +341,7 @@ metadata/_edit_use_anchors_ = true
 [node name="ForMoney" type="Sprite2D" parent="Money"]
 show_behind_parent = true
 position = Vector2(1144, 74)
-texture = ExtResource("16_8tk68")
+texture = ExtResource("22_xreej")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 deterministic = true
@@ -409,7 +414,7 @@ script = ExtResource("22_6ptv8")
 [node name="ForProgressBar" type="Sprite2D" parent="Progress bar"]
 position = Vector2(463, 38)
 scale = Vector2(1.51442, 1)
-texture = ExtResource("16_8tk68")
+texture = ExtResource("22_xreej")
 
 [node name="Sec1" type="Node2D" parent="Progress bar"]
 position = Vector2(-86, 0)
@@ -491,7 +496,7 @@ offset_left = -33.3198
 offset_top = -8.0
 offset_right = 36.6802
 offset_bottom = 15.0
-theme_override_colors/font_color = Color(0.529412, 0.760784, 0.196078, 1)
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
 theme_override_fonts/font = ExtResource("13_fvp2g")
 theme_override_font_sizes/font_size = 20
 text = "32000"
@@ -507,7 +512,7 @@ offset_left = -25.1308
 offset_top = -8.37692
 offset_right = 25.8692
 offset_bottom = 14.6231
-theme_override_colors/font_color = Color(0.529412, 0.760784, 0.196078, 1)
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
 theme_override_fonts/font = ExtResource("13_fvp2g")
 theme_override_font_sizes/font_size = 20
 text = "1000"
@@ -558,9 +563,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
+offset_left = -37.5
 offset_top = -20.0
-offset_right = 24.0
+offset_right = 2.5
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
