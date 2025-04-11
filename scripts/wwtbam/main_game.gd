@@ -184,7 +184,7 @@ func on_death_money(current_money):
 
 
 func end_game():
-	get_node("Camera2D").position.x += -1175
+	get_node("Camera2D").position.x = -1175
 	get_node("endgame/end_screen/end_label").text = "Поздравляем вам с окончанием игры. \n \n Вы выиграли " + str(get_node("Money/amount").money) + " Br \n \n Рекорд этой игры - " + str(max_score_check(get_node("Money/amount").money)) + " Br" + "\n \n Продолжайте учиться, и может вы выиграете миллион долларов"
 	get_node("Money/amount").money = 1
 

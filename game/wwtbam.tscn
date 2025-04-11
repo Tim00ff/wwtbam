@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://o0hrcwfcvhfp"]
+[gd_scene load_steps=30 format=3 uid="uid://o0hrcwfcvhfp"]
 
 [ext_resource type="Script" path="res://scripts/wwtbam/main_game.gd" id="1_8cg4m"]
 [ext_resource type="AudioStream" uid="uid://s0ng004wb1xx" path="res://audio/hello-new-punter-2008-short.mp3" id="1_njn5i"]
@@ -11,17 +11,21 @@
 [ext_resource type="AudioStream" uid="uid://d28oxupbvoee5" path="res://audio/khsm_q1-5-correct-o.mp3" id="8_4xnfv"]
 [ext_resource type="Texture2D" uid="uid://dkyuua1gcchqd" path="res://sprites/ilyfa toys/option_white.svg" id="10_cu2yi"]
 [ext_resource type="Texture2D" uid="uid://ite8hfc3bixf" path="res://sprites/new design/option_new.svg" id="10_o81tl"]
+[ext_resource type="FontFile" uid="uid://dj1ssecemx0dx" path="res://fonts/Arsenal-Bold.ttf" id="11_u3g0a"]
 [ext_resource type="Texture2D" uid="uid://cbsjsirrvvtkp" path="res://sprites/new design/question_new.svg" id="12_e0xqn"]
 [ext_resource type="FontFile" uid="uid://wyqawfli0ko1" path="res://fonts/Insight Sans SSi.ttf" id="13_fvp2g"]
 [ext_resource type="Script" path="res://scripts/start/start.gd" id="14_7hduf"]
 [ext_resource type="FontFile" uid="uid://c18qj648br7s" path="res://fonts/RussoOne-Regular.ttf" id="14_fvl46"]
 [ext_resource type="Texture2D" uid="uid://s11uio2dhpkl" path="res://sprites/new design/for_money.svg" id="16_8tk68"]
+[ext_resource type="Texture2D" uid="uid://bglrbka224qgu" path="res://sprites/designer_arts/кнопка - не нажато.png" id="17_eivdc"]
 [ext_resource type="Texture2D" uid="uid://dh1ct2fiwewct" path="res://sprites/ilyfa toys/door.svg" id="17_jn3u4"]
+[ext_resource type="Texture2D" uid="uid://x75fgtopt1d7" path="res://sprites/designer_arts/кнопка - нажато 1.png" id="18_khqfq"]
 [ext_resource type="Texture2D" uid="uid://bcam22livnaye" path="res://sprites/new design/progress.svg" id="19_r1o14"]
 [ext_resource type="Texture2D" uid="uid://dwr5tmjssfcu5" path="res://sprites/new design/money_in_progress.svg" id="20_jio4w"]
-[ext_resource type="Texture2D" uid="uid://dsyf1t1d0g8x8" path="res://sprites/fon details/dirty_fon.svg" id="21_0yvl1"]
 [ext_resource type="Script" path="res://scripts/wwtbam/stages.gd" id="22_6ptv8"]
-[ext_resource type="Texture2D" uid="uid://ddpnmrd8llp1n" path="res://sprites/fon details/clear_fon.svg" id="22_18fum"]
+[ext_resource type="Texture2D" uid="uid://djy1vm0ax2gr" path="res://sprites/designer_arts/зеленая планета .png" id="24_42j47"]
+[ext_resource type="Script" path="res://scripts/start/зеленая_планета.gd" id="25_c5eys"]
+[ext_resource type="Texture2D" uid="uid://d35popwqysic7" path="res://sprites/designer_arts/круги.png" id="26_bgyx7"]
 
 [sub_resource type="Animation" id="Animation_1am8d"]
 length = 0.001
@@ -107,9 +111,6 @@ _data = {
 "option1choice": SubResource("Animation_dm6i7")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a73xa"]
-load_path = "res://.godot/imported/question_new.svg-98da6ca285515d6c6c05184ce0eb0377.ctex"
-
 [node name="WWTBAM" type="Node2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_8cg4m")
@@ -183,7 +184,7 @@ offset_left = 8.0
 offset_top = 7.0
 offset_right = 515.0
 offset_bottom = 102.0
-theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvhvhvjASVDJHSAVDJASHVDvhvhv
 "
@@ -210,7 +211,7 @@ offset_left = 7.0
 offset_top = 6.5
 offset_right = 514.0
 offset_bottom = 101.5
-theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
 "
@@ -237,7 +238,7 @@ offset_left = 8.0
 offset_top = 5.75
 offset_right = 515.0
 offset_bottom = 100.75
-theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
 "
@@ -264,7 +265,7 @@ offset_left = 6.0
 offset_top = 5.5
 offset_right = 513.0
 offset_bottom = 100.5
-theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
 "
@@ -285,7 +286,7 @@ offset_left = 54.75
 offset_top = 161.25
 offset_right = 1102.75
 offset_bottom = 389.25
-theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_fonts/font = ExtResource("11_u3g0a")
 theme_override_font_sizes/font_size = 18
 text = "WABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUB"
 autowrap_mode = 3
@@ -351,26 +352,33 @@ scale = Vector2(115.2, 64.8)
 metadata/_edit_lock_ = true
 
 [node name="start" type="TextureButton" parent="endgame"]
-offset_left = -826.0
+offset_left = -801.75
 offset_top = 488.0
-offset_right = -276.0
-offset_bottom = 598.0
-scale = Vector2(0.794595, 0.794595)
+offset_right = 559.25
+offset_bottom = 826.0
+scale = Vector2(0.3, 0.3)
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
 action_mode = 0
 button_mask = 3
-texture_normal = ExtResource("10_o81tl")
+texture_normal = ExtResource("17_eivdc")
+texture_pressed = ExtResource("18_khqfq")
+texture_hover = ExtResource("17_eivdc")
+texture_focused = ExtResource("18_khqfq")
 stretch_mode = 0
 script = ExtResource("14_7hduf")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="endgame/start"]
-layout_mode = 0
-offset_right = 550.0
-offset_bottom = 104.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.380392, 0.537255, 0.188235, 1)
 theme_override_fonts/font = ExtResource("14_fvl46")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 80
 text = "Играть еще?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -378,11 +386,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="end_screen" type="Node2D" parent="endgame"]
 position = Vector2(-1175, 0)
-
-[node name="Question_sprite" type="Sprite2D" parent="endgame/end_screen"]
-position = Vector2(593.755, 268.688)
-scale = Vector2(0.954241, 1.01309)
-texture = SubResource("CompressedTexture2D_a73xa")
 
 [node name="end_label" type="Label" parent="endgame/end_screen"]
 offset_left = 55.0
@@ -509,23 +512,70 @@ theme_override_fonts/font = ExtResource("13_fvp2g")
 theme_override_font_sizes/font_size = 20
 text = "1000"
 
-[node name="ClearFon" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(610.375, 347)
-scale = Vector2(1.09773, 1.12091)
-texture = ExtResource("22_18fum")
+[node name="ReferenceRect2" type="ReferenceRect" parent="."]
+offset_right = 1175.0
+offset_bottom = 648.0
+mouse_filter = 2
+border_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="DirtyFon" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(-590, 348)
-texture = ExtResource("21_0yvl1")
+[node name="ColorRect2" type="ColorRect" parent="ReferenceRect2"]
+z_index = -11
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.380392, 0.537255, 0.188235, 1)
 metadata/_edit_lock_ = true
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
-offset_left = -1152.0
+offset_left = -1178.0
 offset_bottom = 648.0
+mouse_filter = 2
 border_width = 5.0
+
+[node name="ColorRect" type="ColorRect" parent="ReferenceRect"]
+z_index = -11
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.380392, 0.537255, 0.188235, 1)
+metadata/_edit_lock_ = true
+
+[node name="center" type="Container" parent="ReferenceRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -20.0
+offset_right = 24.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="ЗеленаяПланета" type="Sprite2D" parent="ReferenceRect/center"]
+position = Vector2(17, 0)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("24_42j47")
+script = ExtResource("25_c5eys")
+
+[node name="Круги" type="Sprite2D" parent="ReferenceRect/center"]
+position = Vector2(6.5, 0)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("26_bgyx7")
 
 [connection signal="finished" from="sounds/startup sound" to="sounds/background sound" method="_on_startup_sound_finished"]
 [connection signal="button_up" from="Answers/option1" to="." method="_on_option_1_button_up"]

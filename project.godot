@@ -20,6 +20,7 @@ config/windows_native_icon="res://logo_designer.ico"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [editor]
