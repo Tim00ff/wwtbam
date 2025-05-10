@@ -21,6 +21,7 @@ https://godotengine.org/download/archive/4.3-stable/
 ответ
 
 <h2>4. Делаем экспорт проекта на виндовс </h2>
+
 ![image](https://github.com/user-attachments/assets/7a568c9c-88eb-4083-9666-9320b0ab3cca)
 
 ![image](https://github.com/user-attachments/assets/355dafa9-e410-4260-9576-78159a0b6075)
