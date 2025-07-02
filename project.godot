@@ -10,13 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Millonaire game"
+config/name="Экологический вызов : На пути к устойчивому будущему"
 config/version="1.0.0"
 run/main_scene="res://game/start.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://sprites/new design/logo_timoff.png"
+config/icon="res://sprites/designer_arts/зеленая планета .png"
 config/macos_native_icon="res://godot.ico"
-config/windows_native_icon="res://logo_designer.ico"
+config/windows_native_icon="res://final_logo.ico"
 
 [display]
 

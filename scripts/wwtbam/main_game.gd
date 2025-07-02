@@ -11,7 +11,7 @@ var record
 var answ_pos = [Vector2(283.75, 477.5), Vector2(860.75, 477.5), Vector2(284, 362.5), Vector2(860.75, 360.5)]
 
 func _ready() -> void:
-	questions = load_questions("res://questions/questions.res")
+	questions = load_questions("res://questions/questions_extended.res")
 	current_stage = 1
 	difficulty = 1
 	change_question(questions, 1)
@@ -142,6 +142,7 @@ func is_answer_right(option_id):
 		await get_tree().create_timer(1).timeout
 		get_node('Answers/White2').position = answ_pos[correct_answer]
 		get_node('Answers/White2').self_modulate = '#0aff00a2'
+		var objects = [get_node("Answers/option1/Label"), get_node("Answers/option2/Label"), get_node("Answers/option3/Label"), get_node("Answers/option4/Label")]
 		await get_tree().create_timer(4).timeout
 		get_node('Answers/White2').position = Vector2(-1000, -1000)
 		get_node("Money/amount").set_money(on_death_money(get_node("Money/amount").money)) #updating money if we lost
@@ -168,7 +169,9 @@ func enable_buttons():
 		get_node("Money/take money").disabled = false
 
 
+var end_game_var = true
 func _on_take_money_button_up() -> void:
+	end_game_var = false
 	end_game()
 	
 
@@ -183,10 +186,23 @@ func on_death_money(current_money):
 
 
 
+func reset_end_game():
+	get_node("EndGame/Bad").visible = false
+	get_node("EndGame/Good").visible = false
+	get_node("EndGame/Best").visible = false
+	
 func end_game():
+	reset_end_game()
+	if current_stage < 6 and current_stage > 0 and end_game_var:
+		get_node("EndGame/Bad").visible = true
+	elif current_stage > 15:
+		get_node("EndGame/Best").visible = true
+	else:
+		get_node("EndGame/Good").visible = true
 	get_node("Camera2D").position.x = -1175
-	get_node("endgame/end_screen/end_label").text = "Поздравляем вам с окончанием игры. \n \n Вы выиграли " + str(get_node("Money/amount").money) + " Br \n \n Рекорд этой игры - " + str(max_score_check(get_node("Money/amount").money)) + " Br" + "\n \n Продолжайте учиться, и может вы выиграете миллион долларов"
+	get_node("EndGame/Good/endgame/end_screen/end_label").text = "Поздравляем вас с окончанием игры. \n \n Ваш выигрыш: " + str(get_node("Money/amount").money) + " Br \n Ваш рекорд: " + str(max_score_check(get_node("Money/amount").money)) + " Br" + "\n \n Берегите окружающую среду!!!"
 	get_node("Money/amount").money = 1
+	end_game_var = true
 
 func max_score_check(score):
 	var file

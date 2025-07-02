@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ukemk53g2ldi"
-path="res://.godot/imported/log2.png-a6ca21d0ddfdb0265cba202f4fda101e.ctex"
+uid="uid://dlijm4k80ug4l"
+path="res://.godot/imported/stage_white.svg-0a67fe208f86b760335c7c9930f06682.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ilyfa toys/log2.png"
-dest_files=["res://.godot/imported/log2.png-a6ca21d0ddfdb0265cba202f4fda101e.ctex"]
+source_file="res://sprites/ilyfa toys/stage_white.svg"
+dest_files=["res://.godot/imported/stage_white.svg-0a67fe208f86b760335c7c9930f06682.ctex"]
 
 [params]
 
@@ -31,4 +31,7 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
